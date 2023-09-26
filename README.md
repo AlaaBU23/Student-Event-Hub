@@ -1,5 +1,5 @@
 # Student-Event-Hub
-
+ 
 ## Overview
 Student Event Hub is a web-based platform designed to simplify event management and attendance for students. It serves as a centralized hub for event hosts and attendees to connect, list events, manage attendees, and promote gatherings within their university community. The platform emphasizes safety and accountability through user profiles, ratings, and event requisites.
 
