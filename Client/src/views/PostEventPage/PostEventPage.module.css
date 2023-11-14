@@ -1,0 +1,211 @@
+.root {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.rectangle14 {
+  position: absolute;
+  left: 173.4557px;
+  top: 567px;
+  width: 1640.5443px;
+  height: 370px;
+  overflow: visible;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle15 {
+  position: absolute;
+  left: 143px;
+  top: 589.7911px;
+  width: 1647.0902px;
+  height: 388.2089px;
+  overflow: visible;
+  filter: blur(1.5px);
+}
+
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+
+.eventDetails {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 164.5849px;
+  top: 612.5823px;
+  width: 475.0959px;
+  height: 32.6673px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rectangle12 {
+  position: absolute;
+  left: 168.0121px;
+  top: 259px;
+  width: 1645.9878px;
+  height: 214.2759px;
+  overflow: visible;
+}
+
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle13 {
+  position: absolute;
+  left: 143px;
+  top: 283.7241px;
+  width: 1645.9878px;
+  height: 214.2759px;
+  overflow: visible;
+  filter: blur(2px);
+}
+
+.icon4 {
+  width: 100%;
+  height: 100%;
+}
+
+.address {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 164px;
+  top: 380px;
+  width: 311px;
+  height: 70px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.address1 {
+  color: #000;
+  font-size: 30px;
+  line-height: 100%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 330px;
+  top: 380px;
+  width: 600px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dateAndTime {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 163px;
+  top: 337px;
+  width: 379px;
+  height: 53px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.eventName {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 163px;
+  top: 294px;
+  width: 285px;
+  height: 42px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.zipCodeID {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 166px;
+  top: 430px;
+  width: 370px;
+  height: 39px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.post {
+  position: absolute;
+  left: 1574px;
+  top: 359px;
+  width: 115px;
+  height: 44px;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.post2 {
+  color: #fff;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 120.2504px;
+  height: 29.669px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pleaseIntroduceTheDetailsForYo {
+  color: #fff;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 258px;
+  top: 185px;
+  width: 1265px;
+  height: 84px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.createAnEvent {
+  color: #b6f;
+  font-size: 64px;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 153px;
+  top: 131px;
+  width: 976px;
+  height: 71px;
+  justify-content: flex-end;
+  flex-direction: column;
+}

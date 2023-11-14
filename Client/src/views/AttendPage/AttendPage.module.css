@@ -1,0 +1,250 @@
+.root {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.rectangle17 {
+  position: absolute;
+  left: 1437.742px;
+  top: 759px;
+  width: 391.258px;
+  height: 166.9914px;
+  overflow: visible;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle18 {
+  position: absolute;
+  left: 1410px;
+  top: 776.4828px;
+  width: 391.258px;
+  height: 193.5171px;
+  overflow: visible;
+  filter: blur(2px);
+}
+
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+
+.contactWithHost {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1431px;
+  top: 786.8822px;
+  width: 370px;
+  height: 39.1857px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rectangle14 {
+  position: absolute;
+  left: 188.8814px;
+  top: 581px;
+  width: 1159.1187px;
+  height: 346.5767px;
+  overflow: visible;
+}
+
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle15 {
+  position: absolute;
+  left: 97px;
+  top: 602.5712px;
+  width: 1214.6514px;
+  height: 367.4288px;
+  overflow: visible;
+  filter: blur(1.5px);
+}
+
+.icon4 {
+  width: 100%;
+  height: 100%;
+}
+
+.eventDetails {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 119px;
+  top: 614.8998px;
+  width: 284px;
+  height: 40.6797px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.rectangle12 {
+  position: absolute;
+  left: 126.7156px;
+  top: 239px;
+  width: 1692.2844px;
+  height: 271.6552px;
+  overflow: visible;
+}
+
+.icon5 {
+  width: 100%;
+  height: 100%;
+}
+
+.rectangle13 {
+  position: absolute;
+  left: 101px;
+  top: 270.3448px;
+  width: 1692.2844px;
+  height: 271.6552px;
+  overflow: visible;
+  filter: blur(2px);
+}
+
+.icon6 {
+  width: 100%;
+  height: 100%;
+}
+
+.frame15205 {
+  position: absolute;
+  left: 117px;
+  top: 297px;
+  width: min-content;
+  height: min-content;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.eventName {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 312px;
+  height: 39px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dateAndTime {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 355px;
+  height: 50px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.address {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 212px;
+  height: 43px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.zipCode {
+  color: #000;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 242px;
+  height: 52px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.join {
+  position: absolute;
+  left: 1596px;
+  top: 380px;
+  width: 120px;
+  height: 50px;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.join2 {
+  color: #fff;
+  font-size: 36px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 120.2504px;
+  height: 29.669px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timeLeftArea {
+  position: absolute;
+  left: 1408px;
+  top: 587px;
+  width: 419px;
+  height: 135px;
+  overflow: visible;
+}
+
+.icon7 {
+  width: 100%;
+  height: 100%;
+}
+
+.joinAnEvent {
+  color: #fff;
+  font-size: 60px;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 105px;
+  top: 100px;
+  width: 884px;
+  height: 120px;
+  flex-direction: column;
+}
+
+.hereAreTheEventDetails {
+  color: #fff;
+  font-size: 36px;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 188px;
+  top: 197px;
+  width: 912px;
+  height: 64px;
+  flex-direction: column;
+}

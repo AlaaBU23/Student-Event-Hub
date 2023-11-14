@@ -1,0 +1,2165 @@
+.root {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  overflow: auto;
+}
+.rectangle28 {
+  position: absolute;
+  left: 1274px;
+  top: 677px;
+  width: 306px;
+  height: 260px;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.rectangle29 {
+  position: absolute;
+  left: 1244px;
+  top: 707px;
+  width: 307px;
+  height: 272px;
+  overflow: visible;
+}
+.icon2 {
+  width: 100%;
+  height: 100%;
+}
+.name {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1342px;
+  top: 735px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+.button {
+  position: absolute;
+  left: 66.6667%;
+  right: 23.1144%;
+  top: 78.9129%;
+  bottom: 18.6351%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r1 {
+  position: absolute;
+  left: 1387.824px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r2 {
+  position: absolute;
+  left: 1416.1057px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r3 {
+  position: absolute;
+  left: 1444.3873px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._3Star {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1287.0704px;
+  top: 857.5556px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button2 {
+  position: absolute;
+  left: 66.6667%;
+  right: 20.2604%;
+  top: 73.5185%;
+  bottom: 24.0295%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r12 {
+  position: absolute;
+  left: 1387.824px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r12.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r22 {
+  position: absolute;
+  left: 1416.1057px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r22.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r32 {
+  position: absolute;
+  left: 1444.3873px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r32.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r4 {
+  position: absolute;
+  left: 1470.9014px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r4.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r5 {
+  position: absolute;
+  left: 1499.1831px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._5Star {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1287.0704px;
+  top: 799.2963px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button3 {
+  position: absolute;
+  left: 66.6667%;
+  right: 25.9683%;
+  top: 84.3073%;
+  bottom: 13.2407%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r13 {
+  position: absolute;
+  left: 1387.824px;
+  top: 914.4908px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r13.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1Star {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1287.0704px;
+  top: 915.8148px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button4 {
+  position: absolute;
+  left: 66.6667%;
+  right: 21.5493%;
+  top: 76.2157%;
+  bottom: 21.3323%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r23 {
+  position: absolute;
+  left: 1387.824px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r23.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r33 {
+  position: absolute;
+  left: 1417.8732px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r33.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r42 {
+  position: absolute;
+  left: 1447.9225px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r42.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r52 {
+  position: absolute;
+  left: 1476.2042px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r52.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._4Star {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1287.0704px;
+  top: 828.4259px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button5 {
+  position: absolute;
+  left: 66.6667%;
+  right: 24.2191%;
+  top: 81.6101%;
+  bottom: 15.9379%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.button6 {
+  position: absolute;
+  left: 66.6667%;
+  right: 24.2191%;
+  top: 81.6101%;
+  bottom: 15.9379%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r14 {
+  position: absolute;
+  left: 1387.824px;
+  top: 885.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r14.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r24 {
+  position: absolute;
+  left: 1419.6409px;
+  top: 885.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r24.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._2Star {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1287.0704px;
+  top: 886.6852px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.rectangle282 {
+  position: absolute;
+  left: 740px;
+  top: 677px;
+  width: 306px;
+  height: 260px;
+  overflow: visible;
+}
+.icon3 {
+  width: 100%;
+  height: 100%;
+}
+.rectangle292 {
+  position: absolute;
+  left: 710px;
+  top: 707px;
+  width: 307px;
+  height: 272px;
+  overflow: visible;
+}
+.icon4 {
+  width: 100%;
+  height: 100%;
+}
+.name2 {
+  position: absolute;
+  left: 810px;
+  top: 746px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+.textBlock {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  margin-top: 0;
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.button7 {
+  position: absolute;
+  left: 38.4375%;
+  right: 51.3435%;
+  top: 78.9129%;
+  bottom: 18.6351%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r15 {
+  position: absolute;
+  left: 845.824px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r15.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r25 {
+  position: absolute;
+  left: 874.1057px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r25.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r34 {
+  position: absolute;
+  left: 902.3873px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r34.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._3Star2 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 745.0704px;
+  top: 857.5556px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button8 {
+  position: absolute;
+  left: 38.4375%;
+  right: 48.4896%;
+  top: 73.5185%;
+  bottom: 24.0295%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r16 {
+  position: absolute;
+  left: 845.824px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r16.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r26 {
+  position: absolute;
+  left: 874.1057px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r26.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r35 {
+  position: absolute;
+  left: 902.3873px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r35.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r43 {
+  position: absolute;
+  left: 928.9014px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r43.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r53 {
+  position: absolute;
+  left: 957.1831px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r53.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._5Star2 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 745.0704px;
+  top: 799.2963px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button9 {
+  position: absolute;
+  left: 38.4375%;
+  right: 54.1975%;
+  top: 84.3073%;
+  bottom: 13.2407%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r17 {
+  position: absolute;
+  left: 845.824px;
+  top: 914.4908px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r17.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1Star2 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 745.0704px;
+  top: 915.8148px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button10 {
+  position: absolute;
+  left: 38.4375%;
+  right: 49.7785%;
+  top: 76.2157%;
+  bottom: 21.3323%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r27 {
+  position: absolute;
+  left: 845.824px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r27.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r36 {
+  position: absolute;
+  left: 875.8732px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r36.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r44 {
+  position: absolute;
+  left: 905.9225px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r44.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r54 {
+  position: absolute;
+  left: 934.2042px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r54.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._4Star2 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 745.0704px;
+  top: 828.4259px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button11 {
+  position: absolute;
+  left: 38.4375%;
+  right: 52.4483%;
+  top: 81.6101%;
+  bottom: 15.9379%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.button12 {
+  position: absolute;
+  left: 38.4375%;
+  right: 52.4483%;
+  top: 81.6101%;
+  bottom: 15.9379%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r18 {
+  position: absolute;
+  left: 845.824px;
+  top: 885.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r18.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r28 {
+  position: absolute;
+  left: 877.6409px;
+  top: 885.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r28.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._2Star2 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 745.0704px;
+  top: 886.6852px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.rectangle283 {
+  position: absolute;
+  left: 245px;
+  top: 677px;
+  width: 306px;
+  height: 260px;
+  overflow: visible;
+}
+.icon5 {
+  width: 100%;
+  height: 100%;
+}
+.rectangle293 {
+  position: absolute;
+  left: 215px;
+  top: 707px;
+  width: 307px;
+  height: 272px;
+  overflow: visible;
+}
+.icon6 {
+  width: 100%;
+  height: 100%;
+}
+.name3 {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 304px;
+  top: 746px;
+  width: 298px;
+  height: 56px;
+  flex-direction: column;
+}
+.button13 {
+  position: absolute;
+  left: 12.5%;
+  right: 77.281%;
+  top: 78.9129%;
+  bottom: 18.6351%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r19 {
+  position: absolute;
+  left: 347.824px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r19.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r29 {
+  position: absolute;
+  left: 376.1057px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r29.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r37 {
+  position: absolute;
+  left: 404.3873px;
+  top: 856.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r37.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._3Star3 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 247.0704px;
+  top: 857.5556px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button14 {
+  position: absolute;
+  left: 12.5%;
+  right: 74.4271%;
+  top: 73.5185%;
+  bottom: 24.0295%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r110 {
+  position: absolute;
+  left: 347.824px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r110.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r210 {
+  position: absolute;
+  left: 376.1057px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r210.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r38 {
+  position: absolute;
+  left: 404.3873px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r38.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r45 {
+  position: absolute;
+  left: 430.9014px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r45.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r55 {
+  position: absolute;
+  left: 459.1831px;
+  top: 797.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r55.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._5Star3 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 247.0704px;
+  top: 799.2963px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button15 {
+  position: absolute;
+  left: 12.5%;
+  right: 80.135%;
+  top: 84.3073%;
+  bottom: 13.2407%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r111 {
+  position: absolute;
+  left: 347.824px;
+  top: 914.4908px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r111.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1Star3 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 247.0704px;
+  top: 915.8148px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button16 {
+  position: absolute;
+  left: 12.5%;
+  right: 75.716%;
+  top: 76.2157%;
+  bottom: 21.3323%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r211 {
+  position: absolute;
+  left: 347.824px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r211.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r39 {
+  position: absolute;
+  left: 377.8732px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r39.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r46 {
+  position: absolute;
+  left: 407.9225px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r46.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r56 {
+  position: absolute;
+  left: 436.2042px;
+  top: 827.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r56.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._4Star3 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 247.0704px;
+  top: 828.4259px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button17 {
+  position: absolute;
+  left: 12.5%;
+  right: 78.3858%;
+  top: 81.6101%;
+  bottom: 15.9379%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.button18 {
+  position: absolute;
+  left: 12.5%;
+  right: 78.3858%;
+  top: 81.6101%;
+  bottom: 15.9379%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r112 {
+  position: absolute;
+  left: 347.824px;
+  top: 885.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r112.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r212 {
+  position: absolute;
+  left: 379.6409px;
+  top: 885.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r212.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._2Star3 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 247.0704px;
+  top: 886.6852px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.rectangle284 {
+  position: absolute;
+  left: 1274px;
+  top: 276px;
+  width: 306px;
+  height: 260px;
+  overflow: visible;
+}
+.icon7 {
+  width: 100%;
+  height: 100%;
+}
+.rectangle294 {
+  position: absolute;
+  left: 1244px;
+  top: 306px;
+  width: 307px;
+  height: 272px;
+  overflow: visible;
+}
+.icon8 {
+  width: 100%;
+  height: 100%;
+}
+.name4 {
+  position: absolute;
+  left: 1342px;
+  top: 334px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+.textBlock3 {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock4 {
+  margin-top: 0;
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.button19 {
+  position: absolute;
+  left: 66.9271%;
+  right: 22.8539%;
+  top: 42.987%;
+  bottom: 54.561%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r113 {
+  position: absolute;
+  left: 1392.824px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r113.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r213 {
+  position: absolute;
+  left: 1421.1057px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r213.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r310 {
+  position: absolute;
+  left: 1449.3873px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r310.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._3Star4 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1292.0704px;
+  top: 469.5556px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button20 {
+  position: absolute;
+  left: 66.9271%;
+  right: 20%;
+  top: 37.5926%;
+  bottom: 59.9554%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r114 {
+  position: absolute;
+  left: 1392.824px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r114.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r214 {
+  position: absolute;
+  left: 1421.1057px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r214.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r311 {
+  position: absolute;
+  left: 1449.3873px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r311.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r47 {
+  position: absolute;
+  left: 1475.9014px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r47.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r57 {
+  position: absolute;
+  left: 1504.1831px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r57.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._5Star4 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1292.0704px;
+  top: 411.2963px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button21 {
+  position: absolute;
+  left: 66.9271%;
+  right: 25.7079%;
+  top: 48.3813%;
+  bottom: 49.1667%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r115 {
+  position: absolute;
+  left: 1392.824px;
+  top: 526.4908px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r115.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1Star4 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1292.0704px;
+  top: 527.8148px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button22 {
+  position: absolute;
+  left: 66.9271%;
+  right: 21.2889%;
+  top: 40.2898%;
+  bottom: 57.2582%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r215 {
+  position: absolute;
+  left: 1392.824px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r215.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r312 {
+  position: absolute;
+  left: 1422.8732px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r312.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r48 {
+  position: absolute;
+  left: 1452.9225px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r48.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r58 {
+  position: absolute;
+  left: 1481.2042px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r58.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._4Star4 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1292.0704px;
+  top: 440.4259px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button23 {
+  position: absolute;
+  left: 66.9271%;
+  right: 23.9587%;
+  top: 45.6842%;
+  bottom: 51.8639%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.button24 {
+  position: absolute;
+  left: 66.9271%;
+  right: 23.9587%;
+  top: 45.6842%;
+  bottom: 51.8639%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r116 {
+  position: absolute;
+  left: 1392.824px;
+  top: 497.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r116.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r216 {
+  position: absolute;
+  left: 1424.6409px;
+  top: 497.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r216.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._2Star4 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 1292.0704px;
+  top: 498.6852px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.rectangle285 {
+  position: absolute;
+  left: 751px;
+  top: 276px;
+  width: 306px;
+  height: 260px;
+  overflow: visible;
+}
+.icon9 {
+  width: 100%;
+  height: 100%;
+}
+.rectangle295 {
+  position: absolute;
+  left: 721px;
+  top: 306px;
+  width: 307px;
+  height: 272px;
+  overflow: visible;
+}
+.icon10 {
+  width: 100%;
+  height: 100%;
+}
+.name5 {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 810px;
+  top: 345px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+.button25 {
+  position: absolute;
+  left: 39.1146%;
+  right: 50.6664%;
+  top: 42.987%;
+  bottom: 54.561%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r117 {
+  position: absolute;
+  left: 858.824px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r117.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r217 {
+  position: absolute;
+  left: 887.1057px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r217.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r313 {
+  position: absolute;
+  left: 915.3873px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r313.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._3Star5 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 758.0704px;
+  top: 469.5556px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button26 {
+  position: absolute;
+  left: 39.1146%;
+  right: 47.8125%;
+  top: 37.5926%;
+  bottom: 59.9554%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r118 {
+  position: absolute;
+  left: 858.824px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r118.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r218 {
+  position: absolute;
+  left: 887.1057px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r218.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r314 {
+  position: absolute;
+  left: 915.3873px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r314.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r49 {
+  position: absolute;
+  left: 941.9014px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r49.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r59 {
+  position: absolute;
+  left: 970.1831px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r59.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._5Star5 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 758.0704px;
+  top: 411.2963px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button27 {
+  position: absolute;
+  left: 39.1146%;
+  right: 53.5204%;
+  top: 48.3813%;
+  bottom: 49.1667%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r119 {
+  position: absolute;
+  left: 858.824px;
+  top: 526.4908px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r119.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1Star5 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 758.0704px;
+  top: 527.8148px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button28 {
+  position: absolute;
+  left: 39.1146%;
+  right: 49.1014%;
+  top: 40.2898%;
+  bottom: 57.2582%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r219 {
+  position: absolute;
+  left: 858.824px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r219.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r315 {
+  position: absolute;
+  left: 888.8732px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r315.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r410 {
+  position: absolute;
+  left: 918.9225px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r410.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r510 {
+  position: absolute;
+  left: 947.2042px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r510.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._4Star5 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 758.0704px;
+  top: 440.4259px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button29 {
+  position: absolute;
+  left: 39.1146%;
+  right: 51.7712%;
+  top: 45.6842%;
+  bottom: 51.8639%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.button30 {
+  position: absolute;
+  left: 39.1146%;
+  right: 51.7712%;
+  top: 45.6842%;
+  bottom: 51.8639%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r120 {
+  position: absolute;
+  left: 858.824px;
+  top: 497.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r120.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r220 {
+  position: absolute;
+  left: 890.6409px;
+  top: 497.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r220.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._2Star5 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 758.0704px;
+  top: 498.6852px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.rectangle286 {
+  position: absolute;
+  left: 245px;
+  top: 276px;
+  width: 306px;
+  height: 260px;
+  overflow: visible;
+}
+.icon11 {
+  width: 100%;
+  height: 100%;
+}
+.rectangle296 {
+  position: absolute;
+  left: 215px;
+  top: 306px;
+  width: 307px;
+  height: 272px;
+  overflow: visible;
+}
+.icon12 {
+  width: 100%;
+  height: 100%;
+}
+.moreInfo {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 282px;
+  top: 511px;
+  width: 157px;
+  height: 38px;
+  justify-content: center;
+  flex-direction: column;
+}
+.name6 {
+  position: absolute;
+  left: 304px;
+  top: 345px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+.textBlock5 {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock6 {
+  margin-top: 0;
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.button31 {
+  position: absolute;
+  left: 12.7604%;
+  right: 77.0206%;
+  top: 42.987%;
+  bottom: 54.561%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r121 {
+  position: absolute;
+  left: 352.824px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r121.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r221 {
+  position: absolute;
+  left: 381.1057px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r221.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r316 {
+  position: absolute;
+  left: 409.3873px;
+  top: 468.2315px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r316.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._3Star6 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 252.0704px;
+  top: 469.5556px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button32 {
+  position: absolute;
+  left: 12.7604%;
+  right: 74.1667%;
+  top: 37.5926%;
+  bottom: 59.9554%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r122 {
+  position: absolute;
+  left: 352.824px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r122.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r222 {
+  position: absolute;
+  left: 381.1057px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r222.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r317 {
+  position: absolute;
+  left: 409.3873px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r317.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r411 {
+  position: absolute;
+  left: 435.9014px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r411.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r511 {
+  position: absolute;
+  left: 464.1831px;
+  top: 409.9722px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r511.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._5Star6 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 252.0704px;
+  top: 411.2963px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button33 {
+  position: absolute;
+  left: 12.7604%;
+  right: 79.8746%;
+  top: 48.3813%;
+  bottom: 49.1667%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r123 {
+  position: absolute;
+  left: 352.824px;
+  top: 526.4908px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r123.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._1Star6 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 252.0704px;
+  top: 527.8148px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button34 {
+  position: absolute;
+  left: 12.7604%;
+  right: 75.4555%;
+  top: 40.2898%;
+  bottom: 57.2582%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r223 {
+  position: absolute;
+  left: 352.824px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r223.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r318 {
+  position: absolute;
+  left: 382.8732px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r318.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r412 {
+  position: absolute;
+  left: 412.9225px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r412.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r512 {
+  position: absolute;
+  left: 441.2042px;
+  top: 439.1018px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r512.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._4Star6 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 252.0704px;
+  top: 440.4259px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.button35 {
+  position: absolute;
+  left: 12.7604%;
+  right: 78.1254%;
+  top: 45.6842%;
+  bottom: 51.8639%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.button36 {
+  position: absolute;
+  left: 12.7604%;
+  right: 78.1254%;
+  top: 45.6842%;
+  bottom: 51.8639%;
+  padding: 19px 32px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 8px;
+  background-color: #99f0;
+  overflow: hidden;
+}
+.r124 {
+  position: absolute;
+  left: 352.824px;
+  top: 497.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r124.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.r224 {
+  position: absolute;
+  left: 384.6409px;
+  top: 497.3611px;
+  width: 26.5141px;
+  height: 17.213px;
+  background-image:/* webpackIgnore: true */ url('/assets/r224.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+._2Star6 {
+  color: #000;
+  font-size: 14px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 252.0704px;
+  top: 498.6852px;
+  width: 169.6901px;
+  height: 14.5648px;
+  justify-content: center;
+  flex-direction: column;
+}
+.rating {
+  color: #68eeff;
+  font-size: 64px;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 183px;
+  top: 123px;
+  width: 884px;
+  height: 120px;
+  flex-direction: column;
+}
