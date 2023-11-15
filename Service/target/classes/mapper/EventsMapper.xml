@@ -10,7 +10,7 @@
         <result column="event_details" property="eventDetails" jdbcType="VARCHAR"/>
         <result column="event_date" property="eventDate" jdbcType="DATE"/>
         <result column="location" property="location" jdbcType="VARCHAR"/>
-        <result column="zip_code_id" property="zipCodeId" jdbcType="VARCHAR"/>
+        <result column="zip_code" property="zipCode" jdbcType="VARCHAR"/>
         <result column="fee" property="fee" jdbcType="DECIMAL"/>
     </resultMap>
     <!-- 通用查询结果列 -->
