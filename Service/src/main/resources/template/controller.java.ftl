@@ -9,6 +9,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import CS673.SpringBootStudentEventHub.domain.po.${entity}PO;
+import CS673.SpringBootStudentEventHub.domain.vo.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 import java.util.List;
@@ -64,9 +66,9 @@ class ${table.controllerName}<#if superControllerClass??> : ${superControllerCla
     */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById")
-    public ${entity} getById(@PathVariable Integer Id){
+    public ${entity}RespVO getById(@PathVariable String Id){
 
-    return null;
+    return ${(table.serviceName?substring(1))?uncap_first}.get${entity}(Id);
     }
 
     /**
@@ -74,8 +76,8 @@ class ${table.controllerName}<#if superControllerClass??> : ${superControllerCla
     */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public ${entity} add(@RequestBody ${entity} ${entity?uncap_first}){
-    return null;
+    public ${entity}RespVO add(@RequestBody ${entity}AddReqVO ${entity}AddVO){
+    return ${(table.serviceName?substring(1))?uncap_first}.add${entity}(${entity}AddVO);
     }
 
     /**
@@ -83,8 +85,8 @@ class ${table.controllerName}<#if superControllerClass??> : ${superControllerCla
     */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del")
-    public String delete(@PathVariable Integer Id){
-    return null;
+    public Integer delete(@PathVariable String Id){
+    return ${(table.serviceName?substring(1))?uncap_first}.delete${entity}(Id);
     }
 
     /**
@@ -92,8 +94,8 @@ class ${table.controllerName}<#if superControllerClass??> : ${superControllerCla
     */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public ${entity} update(@RequestBody ${entity} ${entity?uncap_first}){
-    return null;
+    public ${entity}RespVO update(@RequestBody ${entity}UpdateReqVO UpdateReqVO){
+    return ${(table.serviceName?substring(1))?uncap_first}.update${entity}(UpdateReqVO);
     }
 
     }
