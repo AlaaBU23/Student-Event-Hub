@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import CS673.SpringBootStudentEventHub.service.IUsersService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +39,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
     @Autowired
     private UsersMapper Users_Mapper;
     @Autowired
-    private RedisTemplate<String,String> redisTemplate;
+    private RedisTemplate<String, String> redisTemplate;
     private SnowFlakeHelper snowFlakeHelper = new SnowFlakeHelper(1, 1, 1);
 
     @Override
@@ -133,14 +134,14 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
         UsersRespVO vo = new UsersRespVO();
 
         // return error whenever either username or password are null;
-        if(userName == null || passWord == null){
-            return Result.fail(10001,"Invalid Input!");
+        if (userName == null || passWord == null) {
+            return Result.fail(10001, "Invalid Input!");
         }
         QueryWrapper<UsersPO> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("UserName", userName);
         queryWrapper.eq("Password", passWord);
         vo = toVO(Users_Mapper.selectOne(queryWrapper));
-        if(vo == null) return Result.fail(10002, "Username or password is wrong.");
+        if (vo == null) return Result.fail(10002, "Username or password is wrong.");
         String token = JwtUtils.createToken(vo.getUserId());
         redisTemplate.opsForValue().set("Token_" + token, JSON.toJSONString(vo));
         return Result.success(token);
@@ -155,16 +156,16 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
 
     @Override
     public Result logOut(String token) {
-        redisTemplate.delete("TOKEN_"+token);
+        redisTemplate.delete("TOKEN_" + token);
         return Result.success("Successfully logout");
     }
 
     private UsersRespVO checkToken(String token) {
-        if(StringUtils.isBlank(token)) return null;
+        if (StringUtils.isBlank(token)) return null;
         Map<String, Object> stringObjectMap = JwtUtils.checkToken(token);
-        if(stringObjectMap == null) return null;
+        if (stringObjectMap == null) return null;
         String userJson = redisTemplate.opsForValue().get("Token_" + token);
-        if(StringUtils.isBlank(userJson)) return null;
+        if (StringUtils.isBlank(userJson)) return null;
         UsersRespVO user = JSON.parseObject(userJson, UsersRespVO.class);
         return user;
     }
