@@ -41,7 +41,7 @@ public class UsersController {
     @RequestMapping(value = "/list")
     public Page findListByPage(@RequestParam(name = "pageNum", defaultValue = "1") int pageNum, @RequestParam(name = "pageSize", defaultValue = "20") int pageSize) {
 
-        return null;
+        return usersService.page(new Page<>(pageNum,pageSize));
     }
 
 

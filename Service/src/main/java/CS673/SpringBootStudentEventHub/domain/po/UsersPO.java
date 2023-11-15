@@ -2,6 +2,7 @@ package CS673.SpringBootStudentEventHub.domain.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import lombok.*;
 
@@ -21,6 +22,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value = "Users对象", description = "")
+@TableName("users")
 public class UsersPO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -52,8 +54,8 @@ public class UsersPO implements Serializable {
     @TableField("university_id")
     private String universityId;
 
-    @TableField("zip_code_id")
-    private String zipCodeId;
+    @TableField("zip_code")
+    private String zipCode;
 
 
 }

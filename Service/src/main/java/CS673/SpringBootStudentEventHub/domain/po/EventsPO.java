@@ -45,8 +45,8 @@ public class EventsPO implements Serializable {
     @TableField("location")
     private String location;
 
-    @TableField("zip_code_id")
-    private String zipCodeId;
+    @TableField("zip_code")
+    private String zipCode;
 
     @TableField("fee")
     private BigDecimal fee;

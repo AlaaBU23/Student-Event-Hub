@@ -19,8 +19,8 @@ public class EventsRespVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "eventId", dataType = "String")
-    private String eventId;
+    @ApiModelProperty(value = "event", dataType = "String")
+    private String event;
 
     @ApiModelProperty(value = "userId", dataType = "String")
     private String userId;

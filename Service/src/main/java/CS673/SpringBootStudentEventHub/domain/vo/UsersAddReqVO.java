@@ -30,8 +30,8 @@ public class UsersAddReqVO implements Serializable {
     @ApiModelProperty(value = "email", dataType = "String")
     private String email;
 
-    @ApiModelProperty(value = "zipCodeId", dataType = "String")
-    private String zipCodeId;
+    @ApiModelProperty(value = "zipCode", dataType = "String")
+    private String zipCode;
 
     @ApiModelProperty(value = "firstName", dataType = "String")
     private String firstName;
@@ -39,8 +39,8 @@ public class UsersAddReqVO implements Serializable {
     @ApiModelProperty(value = "lastName", dataType = "String")
     private String lastName;
 
-    @ApiModelProperty(value = "age", dataType = "int")
-    private Integer age;
+    @ApiModelProperty(value = "age", dataType = "String")
+    private String age;
 
     @ApiModelProperty(value = "university", dataType = "String")
     private String university;
@@ -48,7 +48,5 @@ public class UsersAddReqVO implements Serializable {
     @ApiModelProperty(value = "universityId", dataType = "String")
     private String universityId;
 
-    @ApiModelProperty(value = "Detail", dataType = "String")
-    private String Detail;
 
 }

@@ -36,8 +36,8 @@ public class EventsUpdateReqVO implements Serializable {
     @ApiModelProperty(value = "location", dataType = "String")
     private String location;
 
-    @ApiModelProperty(value = "zipCodeId", dataType = "String")
-    private String zipCodeId;
+    @ApiModelProperty(value = "zipCode", dataType = "String")
+    private String zipCode;
 
     @ApiModelProperty(value = "fee", dataType = "BigDecimal")
     private BigDecimal fee;

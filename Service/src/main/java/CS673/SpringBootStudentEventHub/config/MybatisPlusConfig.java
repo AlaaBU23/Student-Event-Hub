@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
-import com.github.pagehelper.PageInterceptor;
+//import com.github.pagehelper.PageInterceptor;
 import org.apache.ibatis.reflection.MetaObject;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
@@ -16,16 +16,16 @@ import java.util.Date;
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan("xxx")
+@MapperScan("SpringBootStudentEventHub.mapper")
 public class MybatisPlusConfig {
 
     /**
      * pagehelper的分页插件
      */
-    @Bean
-    public PageInterceptor pageInterceptor() {
-        return new PageInterceptor();
-    }
+//    @Bean
+//    public PageInterceptor pageInterceptor() {
+//        return new PageInterceptor();
+//    }
 
     /**
      * 新的分页插件,一缓和二缓遵循mybatis的规则,需要设置 MybatisConfiguration#useDeprecatedExecutor = false 避免缓存出现问题
