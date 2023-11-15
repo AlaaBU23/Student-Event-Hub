@@ -1,6 +1,9 @@
 package CS673.SpringBootStudentEventHub.service.impl;
 
 
+import CS673.SpringBootStudentEventHub.entity.Users;
+import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import CS673.SpringBootStudentEventHub.domain.po.UsersPO;
 import CS673.SpringBootStudentEventHub.tools.*;
@@ -8,6 +11,7 @@ import CS673.SpringBootStudentEventHub.domain.vo.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.transaction.annotation.*;
@@ -15,8 +19,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import CS673.SpringBootStudentEventHub.service.IUsersService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+import java.util.Map;
 
 import java.util.List;
+import java.util.Map;
 
 import CS673.SpringBootStudentEventHub.mapper.UsersMapper;
 
@@ -30,6 +37,8 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
 
     @Autowired
     private UsersMapper Users_Mapper;
+    @Autowired
+    private RedisTemplate<String,String> redisTemplate;
     private SnowFlakeHelper snowFlakeHelper = new SnowFlakeHelper(1, 1, 1);
 
     @Override
@@ -115,6 +124,49 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
             }
         }
         return deleteCount;
+    }
+
+    @Override
+    public Result logIn(Users users) {
+        String userName = users.getUserName();
+        String passWord = users.getPassword();
+        UsersRespVO vo = new UsersRespVO();
+
+        // return error whenever either username or password are null;
+        if(userName == null || passWord == null){
+            return Result.fail(10001,"Invalid Input!");
+        }
+        QueryWrapper<UsersPO> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("UserName", userName);
+        queryWrapper.eq("Password", passWord);
+        vo = toVO(Users_Mapper.selectOne(queryWrapper));
+        if(vo == null) return Result.fail(10002, "Username or password is wrong.");
+        String token = JwtUtils.createToken(vo.getUserId());
+        redisTemplate.opsForValue().set("Token_" + token, JSON.toJSONString(vo));
+        return Result.success(token);
+    }
+
+    @Override
+    public Result findUserByToken(String token) {
+        UsersRespVO vo = checkToken(token);
+        if (vo == null) return Result.fail(10003, "Invalid token");
+        return Result.success(vo);
+    }
+
+    @Override
+    public Result logOut(String token) {
+        redisTemplate.delete("TOKEN_"+token);
+        return Result.success("Successfully logout");
+    }
+
+    private UsersRespVO checkToken(String token) {
+        if(StringUtils.isBlank(token)) return null;
+        Map<String, Object> stringObjectMap = JwtUtils.checkToken(token);
+        if(stringObjectMap == null) return null;
+        String userJson = redisTemplate.opsForValue().get("Token_" + token);
+        if(StringUtils.isBlank(userJson)) return null;
+        UsersRespVO user = JSON.parseObject(userJson, UsersRespVO.class);
+        return user;
     }
 
     /**

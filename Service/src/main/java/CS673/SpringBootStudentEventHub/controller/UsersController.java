@@ -2,6 +2,9 @@ package CS673.SpringBootStudentEventHub.controller;
 
 
 import CS673.SpringBootStudentEventHub.domain.po.UsersPO;
+import CS673.SpringBootStudentEventHub.domain.vo.UsersAddReqVO;
+import CS673.SpringBootStudentEventHub.domain.vo.UsersRespVO;
+import CS673.SpringBootStudentEventHub.tools.Result;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import CS673.SpringBootStudentEventHub.service.IUsersService;
@@ -58,14 +61,10 @@ public class UsersController {
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public Users add(@RequestBody UsersPO users) {
-        return null;
-    }
+    public UsersRespVO add(@RequestBody UsersAddReqVO users) {
 
+        return usersService.addUsers(users);
 
-    @GetMapping(value = "/adds")
-    public Integer addtest() {
-        return 1;
     }
 
     /**
@@ -84,6 +83,24 @@ public class UsersController {
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public Users update(@RequestBody Users users) {
         return null;
+    }
+
+    @ApiOperation(value = "LogIn")
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Result logIn(@RequestBody Users users){
+        return usersService.logIn(users);
+    }
+
+    @ApiOperation(value = "CurrentUser")
+    @RequestMapping(value = "/currentuser", method = RequestMethod.GET)
+    public Result currentUser(@RequestHeader("Authorization") String token){
+        return usersService.findUserByToken(token);
+    }
+
+    @ApiOperation(value = "logOut")
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public Result logOut(@RequestHeader("Authorization") String token){
+        return usersService.logOut(token);
     }
 
 }

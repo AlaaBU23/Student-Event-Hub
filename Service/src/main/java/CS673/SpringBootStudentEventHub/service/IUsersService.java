@@ -1,5 +1,6 @@
 package CS673.SpringBootStudentEventHub.service;
 
+import CS673.SpringBootStudentEventHub.tools.Result;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import CS673.SpringBootStudentEventHub.domain.po.UsersPO;
@@ -29,4 +30,9 @@ public interface IUsersService extends IService<UsersPO> {
 
     public Integer deleteUsersList(UsersBatchReqVO Users_BatchReqVO);
 
+    public Result logIn(Users users);
+
+    public Result findUserByToken(String token);
+
+    public Result logOut(String token);
 }
