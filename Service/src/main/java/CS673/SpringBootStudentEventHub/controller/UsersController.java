@@ -84,7 +84,7 @@ public class UsersController {
 
     @ApiOperation(value = "LogIn")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Result logIn(@RequestBody Users users){
+    public Result logIn(@RequestBody UsersAddReqVO users){
         return usersService.logIn(users);
     }
 

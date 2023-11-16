@@ -128,7 +128,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
     }
 
     @Override
-    public Result logIn(Users users) {
+    public Result logIn(UsersAddReqVO users) {
         String userName = users.getUserName();
         String passWord = users.getPassword();
         UsersRespVO vo = new UsersRespVO();
@@ -141,7 +141,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
         queryWrapper.eq("user_name", userName);
         queryWrapper.eq("password", passWord);
         vo = toVO(Users_Mapper.selectOne(queryWrapper));
-        if (vo == null) return Result.fail(10002, "Username or password is wrong.");
+        if (vo.getUserId() == null) return Result.fail(10002, "Username or password is wrong.");
         String token = JwtUtils.createToken(vo.getUserId());
         redisTemplate.opsForValue().set("Token_" + token, JSON.toJSONString(vo));
         return Result.success(token);

@@ -30,7 +30,7 @@ public interface IUsersService extends IService<UsersPO> {
 
     public Integer deleteUsersList(UsersBatchReqVO Users_BatchReqVO);
 
-    public Result logIn(Users users);
+    public Result logIn(UsersAddReqVO users);
 
     public Result findUserByToken(String token);
 
