@@ -37,7 +37,7 @@ public class GroupmembersServiceImpl extends ServiceImpl<GroupmembersMapper, Gro
         GroupmembersRespVO vo = new GroupmembersRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<GroupmembersPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("group_id", id);
             vo = toVO(Groupmembers_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class GroupmembersServiceImpl extends ServiceImpl<GroupmembersMapper, Gro
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<GroupmembersPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("group_id", id);
             deleteCount = Groupmembers_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class GroupmembersServiceImpl extends ServiceImpl<GroupmembersMapper, Gro
         if (Groupmembers_UpdateReqVO != null) {
             fillingUpdateParams(Groupmembers_UpdateReqVO);
             QueryWrapper<GroupmembersPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("GroupmembersId", Groupmembers_UpdateReqVO.getGroupId());
+            queryWrapper.eq("group_id", Groupmembers_UpdateReqVO.getGroupId());
             GroupmembersPO po = fromReqVO(Groupmembers_UpdateReqVO);
             Groupmembers_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class GroupmembersServiceImpl extends ServiceImpl<GroupmembersMapper, Gro
             List<String> ids = Groupmembers_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<GroupmembersPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("GroupmembersId", ids);
+                queryWrapper.in("group_id", ids);
                 deleteCount = Groupmembers_Mapper.delete(queryWrapper);
             }
         }

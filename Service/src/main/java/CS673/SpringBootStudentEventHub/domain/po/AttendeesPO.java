@@ -7,10 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 
 import io.swagger.annotations.ApiModel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * @author yuan ju
@@ -20,8 +17,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("Attendee")
+@EqualsAndHashCode(callSuper = false)
 @ApiModel(value = "AttendeePO对象", description = "考勤日度报表")
+@TableName("attendees")
 public class AttendeesPO implements Serializable {
 
     private static final long serialVersionUID = 1L;

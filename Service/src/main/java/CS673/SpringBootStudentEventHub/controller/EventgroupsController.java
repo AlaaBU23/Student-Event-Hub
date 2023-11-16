@@ -48,7 +48,7 @@ public class EventgroupsController {
      * 根据id查询
      */
     @ApiOperation(value = "根据id查询数据")
-    @RequestMapping(value = "/getById")
+    @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
     public EventgroupsRespVO getById(@PathVariable String Id) {
 
         return eventgroupsService.getEventgroups(Id);
@@ -67,7 +67,7 @@ public class EventgroupsController {
      * 删除
      */
     @ApiOperation(value = "删除数据")
-    @RequestMapping(value = "/del")
+    @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
     public Integer delete(@PathVariable String Id) {
         return eventgroupsService.deleteEventgroups(Id);
     }

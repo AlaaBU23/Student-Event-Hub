@@ -37,7 +37,7 @@ public class EventregistrationsServiceImpl extends ServiceImpl<Eventregistration
         EventregistrationsRespVO vo = new EventregistrationsRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<EventregistrationsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("registration_id", id);
             vo = toVO(Eventregistrations_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class EventregistrationsServiceImpl extends ServiceImpl<Eventregistration
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<EventregistrationsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("registration_id", id);
             deleteCount = Eventregistrations_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class EventregistrationsServiceImpl extends ServiceImpl<Eventregistration
         if (Eventregistrations_UpdateReqVO != null) {
             fillingUpdateParams(Eventregistrations_UpdateReqVO);
             QueryWrapper<EventregistrationsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("EventregistrationsId", Eventregistrations_UpdateReqVO.getRegistrationId());
+            queryWrapper.eq("registration_id", Eventregistrations_UpdateReqVO.getRegistrationId());
             EventregistrationsPO po = fromReqVO(Eventregistrations_UpdateReqVO);
             Eventregistrations_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class EventregistrationsServiceImpl extends ServiceImpl<Eventregistration
             List<String> ids = Eventregistrations_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<EventregistrationsPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("EventregistrationsId", ids);
+                queryWrapper.in("registration_id", ids);
                 deleteCount = Eventregistrations_Mapper.delete(queryWrapper);
             }
         }

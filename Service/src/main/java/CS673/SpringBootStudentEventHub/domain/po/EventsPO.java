@@ -2,6 +2,7 @@ package CS673.SpringBootStudentEventHub.domain.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import lombok.*;
 
@@ -23,6 +24,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value = "Events对象", description = "")
+@TableName("events")
 public class EventsPO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -48,8 +50,6 @@ public class EventsPO implements Serializable {
     @TableField("zip_code")
     private String zipCode;
 
-    @TableField("fee")
-    private BigDecimal fee;
 
 
 }

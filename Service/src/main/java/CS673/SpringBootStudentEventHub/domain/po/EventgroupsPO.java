@@ -2,6 +2,7 @@ package CS673.SpringBootStudentEventHub.domain.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import lombok.*;
 
@@ -21,6 +22,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value = "EventGroups对象", description = "")
+@TableName("eventgroups")
 public class EventgroupsPO implements Serializable {
 
     private static final long serialVersionUID = 1L;

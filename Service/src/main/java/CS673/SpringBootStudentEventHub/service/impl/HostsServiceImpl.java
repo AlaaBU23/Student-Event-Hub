@@ -37,7 +37,7 @@ public class HostsServiceImpl extends ServiceImpl<HostsMapper, HostsPO> implemen
         HostsRespVO vo = new HostsRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<HostsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("user_id", id);
             vo = toVO(Hosts_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class HostsServiceImpl extends ServiceImpl<HostsMapper, HostsPO> implemen
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<HostsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("user_id", id);
             deleteCount = Hosts_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class HostsServiceImpl extends ServiceImpl<HostsMapper, HostsPO> implemen
         if (Hosts_UpdateReqVO != null) {
             fillingUpdateParams(Hosts_UpdateReqVO);
             QueryWrapper<HostsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("HostsId", Hosts_UpdateReqVO.getUserId());
+            queryWrapper.eq("user_id", Hosts_UpdateReqVO.getUserId());
             HostsPO po = fromReqVO(Hosts_UpdateReqVO);
             Hosts_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class HostsServiceImpl extends ServiceImpl<HostsMapper, HostsPO> implemen
             List<String> ids = Hosts_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<HostsPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("HostsId", ids);
+                queryWrapper.in("user_id", ids);
                 deleteCount = Hosts_Mapper.delete(queryWrapper);
             }
         }

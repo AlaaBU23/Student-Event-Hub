@@ -37,7 +37,7 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
         RatingsRespVO vo = new RatingsRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<RatingsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("rating_id", id);
             vo = toVO(Ratings_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<RatingsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("rating_id", id);
             deleteCount = Ratings_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
         if (Ratings_UpdateReqVO != null) {
             fillingUpdateParams(Ratings_UpdateReqVO);
             QueryWrapper<RatingsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("RatingsId", Ratings_UpdateReqVO.getRatingId());
+            queryWrapper.eq("rating_id", Ratings_UpdateReqVO.getRatingId());
             RatingsPO po = fromReqVO(Ratings_UpdateReqVO);
             Ratings_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
             List<String> ids = Ratings_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<RatingsPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("RatingsId", ids);
+                queryWrapper.in("rating_id", ids);
                 deleteCount = Ratings_Mapper.delete(queryWrapper);
             }
         }

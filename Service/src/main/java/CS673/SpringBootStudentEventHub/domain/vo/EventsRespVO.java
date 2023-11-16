@@ -19,8 +19,8 @@ public class EventsRespVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "event", dataType = "String")
-    private String event;
+    @ApiModelProperty(value = "eventId", dataType = "String")
+    private String eventId;
 
     @ApiModelProperty(value = "userId", dataType = "String")
     private String userId;
@@ -37,10 +37,8 @@ public class EventsRespVO implements Serializable {
     @ApiModelProperty(value = "location", dataType = "String")
     private String location;
 
-    @ApiModelProperty(value = "zipCodeId", dataType = "String")
-    private String zipCodeId;
+    @ApiModelProperty(value = "zipCode", dataType = "String")
+    private String zipCode;
 
-    @ApiModelProperty(value = "fee", dataType = "BigDecimal")
-    private BigDecimal fee;
 
 }

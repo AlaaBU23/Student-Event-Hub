@@ -37,7 +37,7 @@ public class AttendeesServiceImpl extends ServiceImpl<AttendeesMapper, Attendees
         AttendeesRespVO vo = new AttendeesRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<AttendeesPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("user_id", id);
             vo = toVO(Attendees_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class AttendeesServiceImpl extends ServiceImpl<AttendeesMapper, Attendees
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<AttendeesPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("user_id", id);
             deleteCount = Attendees_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class AttendeesServiceImpl extends ServiceImpl<AttendeesMapper, Attendees
         if (Attendees_UpdateReqVO != null) {
             fillingUpdateParams(Attendees_UpdateReqVO);
             QueryWrapper<AttendeesPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("AttendeesId", Attendees_UpdateReqVO.getUserId());
+            queryWrapper.eq("user_id", Attendees_UpdateReqVO.getUserId());
             AttendeesPO po = fromReqVO(Attendees_UpdateReqVO);
             Attendees_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class AttendeesServiceImpl extends ServiceImpl<AttendeesMapper, Attendees
             List<String> ids = Attendees_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<AttendeesPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("AttendeesId", ids);
+                queryWrapper.in("user_id", ids);
                 deleteCount = Attendees_Mapper.delete(queryWrapper);
             }
         }

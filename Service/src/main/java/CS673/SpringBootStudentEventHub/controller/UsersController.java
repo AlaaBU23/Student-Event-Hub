@@ -49,7 +49,7 @@ public class UsersController {
      * 根据id查询
      */
     @ApiOperation(value = "根据id查询数据")
-    @RequestMapping(value = "/getById")
+    @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
     public UsersRespVO getById(@PathVariable String Id) {
 
         return usersService.getUsers(Id);
@@ -68,7 +68,7 @@ public class UsersController {
      * 删除
      */
     @ApiOperation(value = "删除数据")
-    @RequestMapping(value = "/del")
+    @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
     public Integer delete(@PathVariable String Id) {
         return usersService.deleteUsers(Id);
     }

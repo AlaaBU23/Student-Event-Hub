@@ -2,6 +2,7 @@ package CS673.SpringBootStudentEventHub.domain.po;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import lombok.*;
 
@@ -22,6 +23,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value = "Ratings对象", description = "")
+@TableName("ratings")
 public class RatingsPO implements Serializable {
 
     private static final long serialVersionUID = 1L;

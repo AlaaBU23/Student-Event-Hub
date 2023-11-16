@@ -33,7 +33,6 @@ CREATE TABLE Events (
     event_date DATE,
     location VARCHAR(255),
     zip_code VARCHAR(255),
-    fee DECIMAL(10, 2),
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 

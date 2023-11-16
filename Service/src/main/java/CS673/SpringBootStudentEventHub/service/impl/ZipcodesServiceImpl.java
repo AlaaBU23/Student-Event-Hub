@@ -37,7 +37,7 @@ public class ZipcodesServiceImpl extends ServiceImpl<ZipcodesMapper, ZipcodesPO>
         ZipcodesRespVO vo = new ZipcodesRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<ZipcodesPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("zip_code_id", id);
             vo = toVO(Zipcodes_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class ZipcodesServiceImpl extends ServiceImpl<ZipcodesMapper, ZipcodesPO>
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<ZipcodesPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("zip_code_id", id);
             deleteCount = Zipcodes_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class ZipcodesServiceImpl extends ServiceImpl<ZipcodesMapper, ZipcodesPO>
         if (Zipcodes_UpdateReqVO != null) {
             fillingUpdateParams(Zipcodes_UpdateReqVO);
             QueryWrapper<ZipcodesPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("ZipcodesId", Zipcodes_UpdateReqVO.getZipCodeId());
+            queryWrapper.eq("zip_code_id", Zipcodes_UpdateReqVO.getZipCodeId());
             ZipcodesPO po = fromReqVO(Zipcodes_UpdateReqVO);
             Zipcodes_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class ZipcodesServiceImpl extends ServiceImpl<ZipcodesMapper, ZipcodesPO>
             List<String> ids = Zipcodes_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<ZipcodesPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("ZipcodesId", ids);
+                queryWrapper.in("zip_code_id", ids);
                 deleteCount = Zipcodes_Mapper.delete(queryWrapper);
             }
         }

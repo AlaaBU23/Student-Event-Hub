@@ -37,7 +37,7 @@ public class EventgroupsServiceImpl extends ServiceImpl<EventgroupsMapper, Event
         EventgroupsRespVO vo = new EventgroupsRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<EventgroupsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("group_id", id);
             vo = toVO(Eventgroups_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class EventgroupsServiceImpl extends ServiceImpl<EventgroupsMapper, Event
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<EventgroupsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("group_id", id);
             deleteCount = Eventgroups_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class EventgroupsServiceImpl extends ServiceImpl<EventgroupsMapper, Event
         if (Eventgroups_UpdateReqVO != null) {
             fillingUpdateParams(Eventgroups_UpdateReqVO);
             QueryWrapper<EventgroupsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("EventgroupsId", Eventgroups_UpdateReqVO.getGroupId());
+            queryWrapper.eq("group_id", Eventgroups_UpdateReqVO.getGroupId());
             EventgroupsPO po = fromReqVO(Eventgroups_UpdateReqVO);
             Eventgroups_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class EventgroupsServiceImpl extends ServiceImpl<EventgroupsMapper, Event
             List<String> ids = Eventgroups_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<EventgroupsPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("EventgroupsId", ids);
+                queryWrapper.in("group_id", ids);
                 deleteCount = Eventgroups_Mapper.delete(queryWrapper);
             }
         }

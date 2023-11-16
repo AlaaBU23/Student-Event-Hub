@@ -47,7 +47,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
         UsersRespVO vo = new UsersRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<UsersPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("user_id", id);
             vo = toVO(Users_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -59,7 +59,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<UsersPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("user_id", id);
             deleteCount = Users_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -98,7 +98,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
         if (Users_UpdateReqVO != null) {
             fillingUpdateParams(Users_UpdateReqVO);
             QueryWrapper<UsersPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("UsersId", Users_UpdateReqVO.getUserId());
+            queryWrapper.eq("user_id", Users_UpdateReqVO.getUserId());
             UsersPO po = fromReqVO(Users_UpdateReqVO);
             Users_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -120,7 +120,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
             List<String> ids = Users_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<UsersPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("UsersId", ids);
+                queryWrapper.in("user_id", ids);
                 deleteCount = Users_Mapper.delete(queryWrapper);
             }
         }
@@ -138,8 +138,8 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
             return Result.fail(10001, "Invalid Input!");
         }
         QueryWrapper<UsersPO> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("UserName", userName);
-        queryWrapper.eq("Password", passWord);
+        queryWrapper.eq("user_name", userName);
+        queryWrapper.eq("password", passWord);
         vo = toVO(Users_Mapper.selectOne(queryWrapper));
         if (vo == null) return Result.fail(10002, "Username or password is wrong.");
         String token = JwtUtils.createToken(vo.getUserId());

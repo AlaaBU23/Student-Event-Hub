@@ -48,7 +48,7 @@ public class EventsController {
      * 根据id查询
      */
     @ApiOperation(value = "根据id查询数据")
-    @RequestMapping(value = "/getById")
+    @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
     public EventsRespVO getById(@PathVariable String Id) {
 
         return eventsService.getEvents(Id);
@@ -67,7 +67,7 @@ public class EventsController {
      * 删除
      */
     @ApiOperation(value = "删除数据")
-    @RequestMapping(value = "/del")
+    @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
     public Integer delete(@PathVariable String Id) {
         return eventsService.deleteEvents(Id);
     }

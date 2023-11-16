@@ -37,7 +37,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
         EventsRespVO vo = new EventsRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<EventsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("event_id", id);
             vo = toVO(Events_Mapper.selectOne(queryWrapper));
         }
         return vo;
@@ -49,7 +49,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
         Integer deleteCount = 0;
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<EventsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("id", id);
+            queryWrapper.eq("event_id", id);
             deleteCount = Events_Mapper.delete(queryWrapper);
         }
         return deleteCount;
@@ -88,7 +88,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
         if (Events_UpdateReqVO != null) {
             fillingUpdateParams(Events_UpdateReqVO);
             QueryWrapper<EventsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("EventsId", Events_UpdateReqVO.getEventId());
+            queryWrapper.eq("event_id", Events_UpdateReqVO.getEventId());
             EventsPO po = fromReqVO(Events_UpdateReqVO);
             Events_Mapper.update(po, queryWrapper);
             vo = toVO(po);
@@ -110,7 +110,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
             List<String> ids = Events_BatchReqVO.getIds();
             if (ids != null && ids.size() > 0) {
                 QueryWrapper<EventsPO> queryWrapper = new QueryWrapper<>();
-                queryWrapper.in("EventsId", ids);
+                queryWrapper.in("event_id", ids);
                 deleteCount = Events_Mapper.delete(queryWrapper);
             }
         }
