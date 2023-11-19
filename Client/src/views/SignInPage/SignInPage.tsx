@@ -20,7 +20,7 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
       <Background />
       <NavigationBar />
       <div className={classes.rectangle4}></div>
-      <div className={classes.rectangle2}></div>
+      <Input placeholder="password" className={classes.rectangle2} />
       <div className={classes.rectangle7}></div>
       <div className={classes.rectangle5}></div>
       <div className={classes.rectangle9}></div>
@@ -28,7 +28,7 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
       <Input placeholder="firstname" className={classes.rectangle11} />
       <Input placeholder="lastname" className={classes.rectangle12} />
       <div className={classes.rectangle3}></div>
-      <div className={classes.rectangle16}></div>
+      <Input placeholder="username" className={classes.rectangle16} />
       <Button className={classes.signup}>
         <div className={classes.signUp}>Sign Up</div>
       </Button>
