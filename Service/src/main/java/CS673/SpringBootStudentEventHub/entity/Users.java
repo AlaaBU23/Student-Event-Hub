@@ -54,5 +54,8 @@ public class Users implements Serializable {
     @TableField("zip_code_id")
     private String zipCodeId;
 
+    @TableField("description")
+    private String description;
+
 
 }

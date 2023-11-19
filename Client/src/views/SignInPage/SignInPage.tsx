@@ -19,15 +19,14 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     <div>
       <Background />
       <NavigationBar />
-      <div className={classes.rectangle4}></div>
+      <Input placeholder="university" className={classes.rectangle4} />
       <Input placeholder="password" className={classes.rectangle2} />
-      <div className={classes.rectangle7}></div>
-      <div className={classes.rectangle5}></div>
-      <div className={classes.rectangle9}></div>
-      <div className={classes.rectangle6}></div>
+      <Input placeholder="email" className={classes.rectangle7} />
+      <Input placeholder="universityId" className={classes.rectangle5} />
+      <Input placeholder="age" className={classes.rectangle9} />
+      <Input placeholder="Talk about yourself" className={classes.rectangle6} />
       <Input placeholder="firstname" className={classes.rectangle11} />
       <Input placeholder="lastname" className={classes.rectangle12} />
-      <div className={classes.rectangle3}></div>
       <Input placeholder="username" className={classes.rectangle16} />
       <Button className={classes.signup}>
         <div className={classes.signUp}>Sign Up</div>
@@ -45,7 +44,7 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
       <Button className={classes.login}>
         <div className={classes.logIn2}>Log in </div>
       </Button>
-      <Input placeholder="user name" className={classes.rectangle17} />
+      <Input placeholder="username" className={classes.rectangle17} />
       <Input.Password placeholder="password" className={classes.rectangle18} />
       <div className={classes.haveAnAccountAlready}>Have an account already ?</div>
       <div className={classes.rectangle20}>
