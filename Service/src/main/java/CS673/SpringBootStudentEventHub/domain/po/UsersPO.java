@@ -57,5 +57,8 @@ public class UsersPO implements Serializable {
     @TableField("zip_code")
     private String zipCode;
 
+    @TableField("description")
+    private String description;
+
 
 }

@@ -48,5 +48,8 @@ public class UsersAddReqVO implements Serializable {
     @ApiModelProperty(value = "universityId", dataType = "String")
     private String universityId;
 
+    @ApiModelProperty(value = "description", dataType = "String")
+    private String description;
+
 
 }

@@ -21,7 +21,8 @@ CREATE TABLE Users (
     age VARCHAR(10),
     university VARCHAR(255),
     university_id VARCHAR(255),
-    zip_code VARCHAR(255) NOT NULL
+    zip_code VARCHAR(255) NOT NULL,
+    description VARCHAR(255)
 );
 
 -- Events Table
