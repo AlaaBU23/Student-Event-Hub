@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CS673.SpringBootStudentEventHub.mapper.RatingsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="CS673.SpringBootStudentEventHub.domain.po.RatingsPO">
+        <id column="rating_id" property="ratingId" jdbcType="VARCHAR"/>
+        <result column="rated_user_id" property="ratedUserId" jdbcType="VARCHAR"/>
+        <result column="rating_by_user_id" property="ratingByUserId" jdbcType="VARCHAR"/>
+        <result column="rating_value" property="ratingValue" jdbcType="INTEGER"/>
+        <result column="rating_date" property="ratingDate" jdbcType="DATE"/>
+        <result column="rating_for" property="ratingFor" jdbcType="VARCHAR"/>
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        rating_id, rated_user_id, rating_by_user_id, rating_value, rating_date, rating_for
+    </sql>
+</mapper>

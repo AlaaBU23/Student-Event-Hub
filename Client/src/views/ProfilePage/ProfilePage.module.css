@@ -1,0 +1,478 @@
+.rate {
+  position: absolute;
+  display: flex;
+  width: 308px;
+  height: 61px;
+  left: 210px;
+  top: 776px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  color: #B6F;
+  font-family: Holtwood One SC;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.ratebutton {
+  position: absolute;
+  display: flex;
+  width: 193px;
+  height: 63px;
+  align-items: center;
+  justify-content: center;
+  left: 260px;
+  top: 891px;
+  border-radius: 8px;
+  background: #B6F;
+
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.event.event {
+  left: 1551px;
+  top: 675px;
+}
+
+.event2.event2 {
+  left: 716px;
+  top: 241px;
+}
+
+.event3.event3 {
+  left: 1133px;
+  top: 241px;
+}
+
+.event4.event4 {
+  left: 1551px;
+  top: 241px;
+}
+
+.event5.event5 {
+  left: 716px;
+  top: 680px;
+}
+
+.event6.event6 {
+  left: 1133px;
+  top: 680px;
+}
+
+.rectangle9 {
+  position: absolute;
+  left: 136px;
+  top: 740px;
+  width: 451px;
+  height: 265px;
+  border-radius: 10px;
+  background-color: #FFF;
+}
+
+.rectangle7 {
+  position: absolute;
+  left: 136px;
+  top: 197px;
+  width: 451px;
+  height: 491px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.rectangle30 {
+  position: absolute;
+  left: 206.541px;
+  top: 366.9191px;
+  width: 311.0744px;
+  height: 301.2202px;
+  background-color: #fff;
+}
+
+.recentAttendedEvents {
+  color: #fff;
+  font-size: 40px;
+  line-height: 130%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 607px;
+  top: 138px;
+  width: 927px;
+  height: 59px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.event1 {
+  position: absolute;
+  left: 803px;
+  top: 293px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+
+.textBlock {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlock2 {
+  margin-top: 0;
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.event12 {
+  position: absolute;
+  left: 796px;
+  top: 727px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+
+.textBlock3 {
+  color: #b6f;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlock4 {
+  margin-top: 0;
+  color: #b6f;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.event22 {
+  position: absolute;
+  left: 1220px;
+  top: 731px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+
+.textBlock5 {
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlock6 {
+  margin-top: 0;
+  color: #68eeff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.event32 {
+  position: absolute;
+  left: 1650px;
+  top: 731px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+
+.textBlock7 {
+  color: #ffc531;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlock8 {
+  margin-top: 0;
+  color: #ffc531;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.event23 {
+  position: absolute;
+  left: 1227px;
+  top: 288px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+
+.textBlock9 {
+  color: #ffc531;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlock10 {
+  margin-top: 0;
+  color: #ffc531;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.event33 {
+  position: absolute;
+  left: 1646px;
+  top: 288px;
+  width: 298px;
+  height: 72px;
+  flex-direction: column;
+}
+
+.textBlock11 {
+  color: #f3a;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlock12 {
+  margin-top: 0;
+  color: #f3a;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.cartButton {
+  position: absolute;
+  left: 779px;
+  top: 468px;
+  width: 155px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.moreInfo {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.cartButton2 {
+  position: absolute;
+  left: 1197px;
+  top: 468px;
+  width: 155px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.moreInfo2 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.cartButton3 {
+  position: absolute;
+  left: 1618px;
+  top: 463px;
+  width: 155px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.moreInfo3 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.cartButton4 {
+  position: absolute;
+  left: 1618px;
+  top: 904px;
+  width: 155px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.moreInfo4 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.cartButton5 {
+  position: absolute;
+  left: 1197px;
+  top: 904px;
+  width: 155px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.moreInfo5 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.cartButton6 {
+  position: absolute;
+  left: 779px;
+  top: 904px;
+  width: 155px;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #b6f;
+  overflow: hidden;
+}
+
+.moreInfo6 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}
+
+.recentCreatedEvents {
+  color: #fff;
+  font-size: 40px;
+  line-height: 130%;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 680px;
+  top: 592px;
+  width: 773px;
+  height: 59px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cartButton7 {
+  position: absolute;
+  left: 240px;
+  top: 240px;
+  width: min-content;
+  height: min-content;
+  padding: 13.5px 23px;
+  border-radius: 8px;
+  background-color: #f3a0;
+  overflow: hidden;
+}
+
+.image72 {
+  width: 183.8692px;
+  height: 177.6427px;
+  border-radius: 88.8214px;
+  background-image:
+    /* webpackIgnore: true */
+    url('/src/assets/profile/image72.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
