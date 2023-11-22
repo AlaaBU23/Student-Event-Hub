@@ -25,6 +25,7 @@ export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) 
         <Rectangle15Icon className={classes.icon2} />
       </div>
       <div className={classes.eventDetails}>Event details:</div>
+      <Input placeholder='Please input here' className={classes.detailsInput} />
       <div className={classes.rectangle12}>
         <Rectangle12Icon className={classes.icon3} />
       </div>
@@ -32,10 +33,13 @@ export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) 
         <Rectangle13Icon className={classes.icon4} />
       </div>
       <div className={classes.address}>Address:</div>
+      <Input placeholder='Please input here' className={classes.addressInput} />
       <div className={classes.dateAndTime}>Date and Time:</div>
+      <Input placeholder='Please input here' className={classes.dateInput} />
       <div className={classes.eventName}>Event name:</div>
-      <Input placeholder='Please input here' className={classes.address1} />
-      <div className={classes.zipCodeID}>Zip Code ID:</div>
+      <Input placeholder='Please input here' className={classes.nameInput} />
+      <div className={classes.zipCode}>Zip Code:</div>
+      <Input placeholder='Please input here' className={classes.zipcodeInput} />
       <div className={classes.post}>
         <div className={classes.post2}>Post</div>
       </div>
