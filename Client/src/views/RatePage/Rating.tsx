@@ -15,8 +15,8 @@ import { Rectangle29Icon4 } from './Rectangle29Icon4.js';
 import { Rectangle29Icon5 } from './Rectangle29Icon5.js';
 import { Rectangle29Icon6 } from './Rectangle29Icon6.js';
 import { Rectangle29Icon } from './Rectangle29Icon.js';
-import { Background } from '@/componets/Background.js';
-import NavigationBar from '@/componets/NavigationBar.js';
+import { Background } from '@/components/Background.js';
+import NavigationBar from '@/components/NavigationBar.js';
 
 interface Props {
   className?: string;

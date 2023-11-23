@@ -4,8 +4,8 @@ import type { FC } from 'react';
 import 'reset-css';
 import classes from './ResetPage.module.css';
 import { Rectangle18Icon } from './Rectangle18Icon.js';
-import { Background } from '@/componets/Background.js';
-import NavigationBar from '@/componets/NavigationBar.js';
+import { Background } from '@/components/Background.js';
+import NavigationBar from '@/components/NavigationBar.js';
 
 interface Props {
   className?: string;

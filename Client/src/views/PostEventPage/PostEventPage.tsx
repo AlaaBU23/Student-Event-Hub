@@ -7,8 +7,8 @@ import { Rectangle12Icon } from './Rectangle12Icon.js';
 import { Rectangle13Icon } from './Rectangle13Icon.js';
 import { Rectangle14Icon } from './Rectangle14Icon.js';
 import { Rectangle15Icon } from './Rectangle15Icon.js';
-import NavigationBar from '@/componets/NavigationBar.js';
-import { Background } from '@/componets/Background.js';
+import NavigationBar from '@/components/NavigationBar.js';
+import { Background } from '@/components/Background.js';
 
 interface Props {
   className?: string;
@@ -25,7 +25,7 @@ export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) 
         <Rectangle15Icon className={classes.icon2} />
       </div>
       <div className={classes.eventDetails}>Event details:</div>
-      <Input placeholder='Please input here' className={classes.detailsInput} />
+      <Input type = "test" placeholder='Please input here' className={classes.detailsInput} />
       <div className={classes.rectangle12}>
         <Rectangle12Icon className={classes.icon3} />
       </div>

@@ -10,8 +10,8 @@ import { Rectangle15Icon } from './Rectangle15Icon.js';
 import { Rectangle17Icon } from './Rectangle17Icon.js';
 import { Rectangle18Icon } from './Rectangle18Icon.js';
 import { TimeLeftAreaIcon } from './TimeLeftAreaIcon.js';
-import { Background } from '@/componets/Background.js';
-import NavigationBar from '@/componets/NavigationBar.js';
+import { Background } from '@/components/Background.js';
+import NavigationBar from '@/components/NavigationBar.js';
 
 interface Props {
   className?: string;

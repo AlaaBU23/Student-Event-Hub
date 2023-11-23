@@ -3,8 +3,8 @@ import type { FC } from 'react';
 
 import { Frame15203Icon } from './Frame15203Icon.js';
 import classes from './Group29.module.css';
-import { Background } from '@/componets/Background.js';
-import NavigationBar from '@/componets/NavigationBar.js';
+import { Background } from '@/components/Background.js';
+import NavigationBar from '@/components/NavigationBar.js';
 
 interface Props {
   className?: string;

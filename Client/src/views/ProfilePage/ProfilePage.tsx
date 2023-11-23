@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import 'reset-css';
 import { Event } from './Event/Event.js';
 import classes from './ProfilePage.module.css';
-import { Background } from '@/componets/Background.js';
-import NavigationBar from '@/componets/NavigationBar.js';
+import { Background } from '@/components/Background.js';
+import NavigationBar from '@/components/NavigationBar.js';
 
 interface Props {
   className?: string;

@@ -6,8 +6,8 @@ import { Line1Icon } from './Line1Icon.js';
 import { Line2Icon } from './Line2Icon.js';
 import { Rectangle20Icon } from './Rectangle20Icon.js';
 import classes from './SignInPage.module.css';
-import NavigationBar from '@/componets/NavigationBar.js';
-import { Background } from '@/componets/Background.js';
+import NavigationBar from '@/components/NavigationBar.js';
+import { Background } from '@/components/Background.js';
 import { Link } from "react-router-dom";
 
 
