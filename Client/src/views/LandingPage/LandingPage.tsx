@@ -7,8 +7,8 @@ import { Rectangle3Icon } from './Rectangle3Icon.js';
 import { Rectangle5Icon } from './Rectangle5Icon.js';
 import { Rectangle10Icon } from './Rectangle10Icon.js';
 import { Rectangle11Icon } from './Rectangle11Icon.js';
-import { Background } from '@/components/Background';
-import NavigationBar from '@/components/NavigationBar';
+import { Background } from '@/componets/Background';
+import NavigationBar from '@/componets/NavigationBar';
 
 interface Props {
   className?: string;

@@ -51,19 +51,6 @@
   justify-content: center;
   flex-direction: column;
 }
-.detailsInput {
-color: #000;
-  font-size: 30px;
-  line-height: 100%;
-  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 164.5849px;
-  top: 680.5823px;
-  width: 1600px;
-  height: 200px;
-  justify-content: center;
-  flex-direction: column;}
 
 .rectangle12 {
   position: absolute;
@@ -109,7 +96,7 @@ color: #000;
   flex-direction: column;
 }
 
-.addressInput {
+.address1 {
   color: #000;
   font-size: 30px;
   line-height: 100%;
@@ -139,21 +126,6 @@ color: #000;
   flex-direction: column;
 }
 
-.dateInput {
-  color: #000;
-  font-size: 30px;
-  line-height: 100%;
-  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 430px;
-  top: 337px;
-  width: 600px;
-  height: 40px;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .eventName {
   color: #000;
   font-size: 36px;
@@ -169,22 +141,7 @@ color: #000;
   flex-direction: column;
 }
 
-.nameInput {
-  color: #000;
-  font-size: 30px;
-  line-height: 100%;
-  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 380px;
-  top: 294px;
-  width: 600px;
-  height: 40px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.zipCode {
+.zipCodeID {
   color: #000;
   font-size: 36px;
   line-height: 120%;
@@ -195,21 +152,6 @@ color: #000;
   top: 430px;
   width: 370px;
   height: 39px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.zipcodeInput {
-  color: #000;
-  font-size: 30px;
-  line-height: 100%;
-  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-    'Liberation Sans', sans-serif;
-  position: absolute;
-  left: 350px;
-  top: 430px;
-  width: 600px;
-  height: 40px;
   justify-content: center;
   flex-direction: column;
 }

@@ -9,8 +9,8 @@ import { Rectangle13Icon2 } from './Rectangle13Icon2.js';
 import { Rectangle13Icon3 } from './Rectangle13Icon3.js';
 import { Rectangle13Icon } from './Rectangle13Icon.js';
 import classes from './RequestForApplication.module.css';
-import { Background } from '@/components/Background.js';
-import NavigationBar from '@/components/NavigationBar.js';
+import { Background } from '@/componets/Background.js';
+import NavigationBar from '@/componets/NavigationBar.js';
 
 interface Props {
   className?: string;
