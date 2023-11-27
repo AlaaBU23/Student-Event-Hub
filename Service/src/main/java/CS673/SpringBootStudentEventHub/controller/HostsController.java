@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/hosts")
+@CrossOrigin(origins = "*")
 public class HostsController {
     @Autowired
     private IHostsService hostsService;
