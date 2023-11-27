@@ -1,9 +1,9 @@
 import request from "./index"
 
-const API_BASE_URL = 'http://localhost:8080';
+const API_BASE_URL = 'http://192.168.5.229:8080';
 
 export const registerUser = async (data: RegisterReq) => {
-  const response = await fetch(`${API_BASE_URL}/register`, {
+  const response = await fetch(`${API_BASE_URL}/add`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
