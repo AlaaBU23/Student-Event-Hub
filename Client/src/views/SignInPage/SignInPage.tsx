@@ -11,7 +11,6 @@ import { Background } from '@/componets/Background.js';
 import { Link, useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from 'react'
 // get data
-import { useSelector, useDispatch } from 'react-redux';
 import { LoginAPI, registerUser } from '@/requset/api.js'
 
 interface Props {
@@ -20,37 +19,49 @@ interface Props {
 
 export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
   //register function
-  const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    email: '',
-    username: '',
-    password: '',
-    pwdConfirm: '',
-    university: '',
-    universityId: '',
-    tay: '',
-  })
-  const handlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({ ...prevState, [name]: value }))
+  const [username2Val, setUsername2Val] = useState("");
+  const [password2Val, setPassword2Val] = useState("");
+  const [emailVal, setEmailVal] = useState("");
+  const [firstnameVal, setfirstnameVal] = useState("");
+  const [lastnameVal, setlastnameVal] = useState("");
+  const [pwdConfirmVal, setpwdConfirmVal] = useState("");
+  const [universityVal, setuniversityVal] = useState("");
+  const [universityIdVal, setuniversityIdVal] = useState("");
+  const [tayVal, settayVal] = useState("");
+
+  const username2Change = (e: ChangeEvent<HTMLInputElement>) => {
+    setUsername2Val(e.target.value)
   }
-  const handleSubmit = async () => {
-    try {
-      const response = await registerUser(formData);
-      // Handle further success (e.g., redirecting to a login page)
-      if (!formData.email || !formData.firstname || !formData.lastname || !formData.password || !formData.pwdConfirm || !formData.tay || !formData.university || !formData.universityId || !formData.username) {
-        alert('complete informations')
-      }
-      if (formData.password !== formData.pwdConfirm) {
-        alert("Two passwords don't match")
-      }
-      console.log('Registration successful', response);
-    } catch (error) {
-      console.error('Registration failed', error);
-      // Handle the error appropriately
+  const emailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmailVal(e.target.value)
+  }
+  const firstnameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setfirstnameVal(e.target.value)
+  }
+  const lastnameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setlastnameVal(e.target.value)
+  }
+  const pwdConfirmChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setpwdConfirmVal(e.target.value)
+  }
+  const universityChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setuniversityVal(e.target.value)
+  }
+  const universtiyIdChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setuniversityIdVal(e.target.value)
+  }
+  const password2Change = (e: ChangeEvent<HTMLInputElement>) => {
+    setPassword2Val(e.target.value)
+  }
+  const tayChange = (e: ChangeEvent<HTMLInputElement>) => {
+    settayVal(e.target.value)
+  }
+
+  const goregister = async () => {
+    if (!username2Val.trim() || !password2Val.trim() || !emailVal.trim() || !firstnameVal.trim() || !lastnameVal.trim() || !pwdConfirmVal.trim() || !universityVal.trim() || !universityIdVal.trim() || !tayVal.trim()) {
+      alert("please input information!")
     }
-  };
+  }
 
   //login function
   let navigateto = useNavigate()
@@ -64,20 +75,20 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
   }
   const goLogin = async () => {
     if (!usernameVal.trim() || !passwordVal.trim()) {
-           alert("please input information!")
-         }
-         let LoginAPIRes = await LoginAPI({
-           username: usernameVal,
-           password: passwordVal,
-           code: "200",
-           uuid: localStorage.getItem("uuid") as string
-         })
-         if (LoginAPIRes.code === 200) {
-           alert("success login")
-           localStorage.setItem("token", LoginAPIRes.token)
-           navigateto("/landingpage")
-           localStorage.removeItem("uuid")
-         }
+      alert("please input information!")
+    }
+    let LoginAPIRes = await LoginAPI({
+      username: usernameVal,
+      password: passwordVal,
+      code: "200",
+      uuid: localStorage.getItem("uuid") as string
+    })
+    if (LoginAPIRes.code === 200) {
+      alert("success login")
+      localStorage.setItem("token", LoginAPIRes.token)
+      navigateto("/landingpage")
+      localStorage.removeItem("uuid")
+    }
 
   }
 
@@ -86,18 +97,18 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
       <Background />
       <NavigationBar />
       <form onSubmit={(e) => e.preventDefault()}>
-        <Input placeholder="university" className={classes.rectangle4} value={formData.university} onChange={handlChange} />
-        <Input.Password placeholder="password" className={classes.rectangle2} value={formData.password} onChange={handlChange} />
-        <Input.Password placeholder="password confirm" className={classes.rectangle7} value={formData.pwdConfirm} onChange={handlChange} />
-        <Input placeholder="universityId" className={classes.rectangle5} value={formData.universityId} onChange={handlChange} />
-        <Input placeholder="email" className={classes.rectangle9} value={formData.email} onChange={handlChange} />
-        <Input placeholder="Talk about yourself" className={classes.rectangle6} value={formData.tay} onChange={handlChange} />
-        <Input placeholder="firstname" className={classes.rectangle11} value={formData.firstname} onChange={handlChange} />
-        <Input placeholder="lastname" className={classes.rectangle12} value={formData.lastname} onChange={handlChange} />
-        <Input placeholder="username" className={classes.rectangle16} value={formData.username} onChange={handlChange} />
+        <Input placeholder="university" className={classes.rectangle4} onChange={universityChange} />
+        <Input.Password placeholder="password" className={classes.rectangle2} onChange={password2Change} />
+        <Input.Password placeholder="password confirm" className={classes.rectangle7} onChange={pwdConfirmChange} />
+        <Input placeholder="universityId" className={classes.rectangle5} onChange={universtiyIdChange} />
+        <Input placeholder="email" className={classes.rectangle9} onChange={emailChange} />
+        <Input placeholder="Talk about yourself" className={classes.rectangle6} onChange={tayChange} />
+        <Input placeholder="firstname" className={classes.rectangle11} onChange={firstnameChange} />
+        <Input placeholder="lastname" className={classes.rectangle12} onChange={lastnameChange} />
+        <Input placeholder="username" className={classes.rectangle16} onChange={username2Change} />
       </form>
       <Button className={classes.signup}>
-        <div className={classes.signUp} onClick={handleSubmit}>Sign Up</div>
+        <div className={classes.signUp} onClick={goregister}>Sign Up</div>
       </Button>
       <div className={classes.createAnAccount}>Create An Account</div>
       <div className={classes.line1}>
