@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/ratings")
+@CrossOrigin(origins = "*")
 public class RatingsController {
     @Autowired
     private IRatingsService ratingsService;

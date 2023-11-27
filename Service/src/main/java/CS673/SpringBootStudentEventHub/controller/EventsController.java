@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/events")
+@CrossOrigin(origins = "*")
 public class EventsController {
     @Autowired
     private IEventsService eventsService;

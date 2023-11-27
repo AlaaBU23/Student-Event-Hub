@@ -30,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "*")
 public class UsersController {
     @Autowired
     private IUsersService usersService;
