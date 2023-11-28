@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/groupmembers")
+@CrossOrigin(origins = "*")
 public class GroupmembersController {
     @Autowired
     private IGroupmembersService groupmembersService;

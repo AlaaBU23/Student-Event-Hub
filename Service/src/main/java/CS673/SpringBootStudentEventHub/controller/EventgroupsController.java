@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/eventgroups")
+@CrossOrigin(origins = "*")
 public class EventgroupsController {
     @Autowired
     private IEventgroupsService eventgroupsService;

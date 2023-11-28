@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/attendees")
+@CrossOrigin(origins = "*")
 public class AttendeesController {
     @Autowired
     private IAttendeesService attendeesService;

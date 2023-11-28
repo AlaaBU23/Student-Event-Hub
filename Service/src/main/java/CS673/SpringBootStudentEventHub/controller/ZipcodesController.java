@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/zipcodes")
+@CrossOrigin(origins = "*")
 public class ZipcodesController {
     @Autowired
     private IZipcodesService zipcodesService;
