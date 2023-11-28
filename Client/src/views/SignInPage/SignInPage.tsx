@@ -24,7 +24,8 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
   const [emailVal, setEmailVal] = useState("");
   const [firstnameVal, setfirstnameVal] = useState("");
   const [lastnameVal, setlastnameVal] = useState("");
-  const [pwdConfirmVal, setpwdConfirmVal] = useState("");
+  const [ageVal, setageVal] = useState("");
+  const [zipcodeVal, setzipcodeVal] = useState("");
   const [universityVal, setuniversityVal] = useState("");
   const [universityIdVal, setuniversityIdVal] = useState("");
   const [tayVal, settayVal] = useState("");
@@ -41,8 +42,11 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
   const lastnameChange = (e: ChangeEvent<HTMLInputElement>) => {
     setlastnameVal(e.target.value)
   }
-  const pwdConfirmChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setpwdConfirmVal(e.target.value)
+  const ageChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setageVal(e.target.value)
+  }
+  const zipcodeChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setzipcodeVal(e.target.value)
   }
   const universityChange = (e: ChangeEvent<HTMLInputElement>) => {
     setuniversityVal(e.target.value)
@@ -58,9 +62,21 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
   }
 
   const goregister = async () => {
-    if (!username2Val.trim() || !password2Val.trim() || !emailVal.trim() || !firstnameVal.trim() || !lastnameVal.trim() || !pwdConfirmVal.trim() || !universityVal.trim() || !universityIdVal.trim() || !tayVal.trim()) {
+    if (!username2Val.trim() || !password2Val.trim() || !emailVal.trim() || !firstnameVal.trim() || !lastnameVal.trim() || !ageVal.trim() || !zipcodeVal.trim() || !universityVal.trim() || !universityIdVal.trim() || !tayVal.trim()) {
       alert("please input information!")
     }
+    await registerUser({
+        userName: username2Val,
+        email: emailVal,
+        password: password2Val,
+        firstName: firstnameVal,
+        lastName: lastnameVal,
+        zipCode: zipcodeVal,
+        university: universityVal,
+        universityId: universityIdVal,
+        age: ageVal,
+        description: tayVal
+    })
   }
 
   //login function
@@ -78,7 +94,7 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
       alert("please input information!")
     }
     let LoginAPIRes = await LoginAPI({
-      username: usernameVal,
+      userName: usernameVal,
       password: passwordVal,
       code: "200",
       uuid: localStorage.getItem("uuid") as string
@@ -99,12 +115,13 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
       <form onSubmit={(e) => e.preventDefault()}>
         <Input placeholder="university" className={classes.rectangle4} onChange={universityChange} />
         <Input.Password placeholder="password" className={classes.rectangle2} onChange={password2Change} />
-        <Input.Password placeholder="password confirm" className={classes.rectangle7} onChange={pwdConfirmChange} />
+        <Input placeholder="zip code" className={classes.rectangle7} onChange={zipcodeChange} />
         <Input placeholder="universityId" className={classes.rectangle5} onChange={universtiyIdChange} />
         <Input placeholder="email" className={classes.rectangle9} onChange={emailChange} />
         <Input placeholder="Talk about yourself" className={classes.rectangle6} onChange={tayChange} />
         <Input placeholder="firstname" className={classes.rectangle11} onChange={firstnameChange} />
         <Input placeholder="lastname" className={classes.rectangle12} onChange={lastnameChange} />
+        <Input placeholder="age" className={classes.rectangle13} onChange={ageChange} />
         <Input placeholder="username" className={classes.rectangle16} onChange={username2Change} />
       </form>
       <Button className={classes.signup}>

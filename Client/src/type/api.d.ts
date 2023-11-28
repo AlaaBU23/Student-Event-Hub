@@ -14,13 +14,19 @@ interface LoginAPIRes {
 }
 
 interface RegisterReq {
-  username: string;
+  userName: string;
   email: string;
   password: string;
   firstname: string;
   lastname: string;
-  pwdConfirm: string;
+  zipCode: string;
   university: string;
   universityId: string;
-  tay: string;
+  age: string;
+  description: string;
+}
+
+//respond
+interface RegisterRes {
+  token: string;
 }
