@@ -18,6 +18,10 @@ const API_BASE_URL = 'http://192.168.5.229:8080';
 //   return response.json();
 // };
 
-export const registerUser = (params: RegisterReq) => request.post("/users/add", params)
+export const registerUser = (params: UserReq) => request.post("/users/add", params)
 
 export const LoginAPI = (params: LoginAPIReq): Promise<LoginAPIRes> => request.post("/users/login", params)
+
+export const updateUserInform = (params: UserReq) => request.post("/users/update", params)
+
+// export const getUserInform = (params: UserReq) => request.get("/users/getById/" + params.userId)

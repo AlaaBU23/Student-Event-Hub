@@ -36,6 +36,7 @@ public class HostsController {
 
     /**
      * 查询分页数据
+     *
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")

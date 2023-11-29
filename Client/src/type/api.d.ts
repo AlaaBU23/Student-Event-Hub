@@ -13,7 +13,8 @@ interface LoginAPIRes {
   token: string;
 }
 
-interface RegisterReq {
+interface UserReq {
+  userId: string;
   userName: string;
   email: string;
   password: string;

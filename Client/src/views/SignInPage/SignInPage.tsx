@@ -65,18 +65,22 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     if (!username2Val.trim() || !password2Val.trim() || !emailVal.trim() || !firstnameVal.trim() || !lastnameVal.trim() || !ageVal.trim() || !zipcodeVal.trim() || !universityVal.trim() || !universityIdVal.trim() || !tayVal.trim()) {
       alert("please input information!")
     }
-    await registerUser({
-        userName: username2Val,
-        email: emailVal,
-        password: password2Val,
-        firstName: firstnameVal,
-        lastName: lastnameVal,
-        zipCode: zipcodeVal,
-        university: universityVal,
-        universityId: universityIdVal,
-        age: ageVal,
-        description: tayVal
-    })
+    else {
+        await registerUser({
+                userName: username2Val,
+                email: emailVal,
+                password: password2Val,
+                firstName: firstnameVal,
+                lastName: lastnameVal,
+                zipCode: zipcodeVal,
+                university: universityVal,
+                universityId: universityIdVal,
+                age: ageVal,
+                description: tayVal
+            })
+        alert("Sign up successfully!")
+        navigateto("/landingpage")
+    }
   }
 
   //login function

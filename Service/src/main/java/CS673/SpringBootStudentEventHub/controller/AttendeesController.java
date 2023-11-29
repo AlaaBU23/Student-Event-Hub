@@ -36,6 +36,7 @@ public class AttendeesController {
 
     /**
      * 查询分页数据
+     * research page data
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")
@@ -47,6 +48,7 @@ public class AttendeesController {
 
     /**
      * 根据id查询
+     * search Attendees by userid
      */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
@@ -57,6 +59,7 @@ public class AttendeesController {
 
     /**
      * 新增
+     * Add new attendee
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -66,6 +69,7 @@ public class AttendeesController {
 
     /**
      * 删除
+     * delete attendee
      */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
@@ -75,6 +79,7 @@ public class AttendeesController {
 
     /**
      * 修改
+     * edit or update attendee information
      */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)
