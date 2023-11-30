@@ -45,7 +45,7 @@ interface EventReq {
 }
 
 // requests for event registration api
-interface RegostratopmReq {
+interface RegistrationReq {
   registrationId: string;
   eventId: string;
   userId: string;
