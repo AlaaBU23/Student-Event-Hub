@@ -36,13 +36,13 @@ export const getEventInform = (params: EventReq) => request.get("/events/getById
 
 export const updateEventInform = (params: EventReq) => request.post("/events/update", params)
 
-export const addRegistration = (params: RegostratopmReq) => request.post("/eventregistrations/add" + params)
+export const addRegistration = (params: RegistrationReq) => request.post("/eventregistrations/add" + params)
 
-export const deleteRegistration = (params: RegostratopmReq) => request.delete("/eventregistrations/del/" + params.eventId)
+export const deleteRegistration = (params: RegistrationReq) => request.delete("/eventregistrations/del/" + params.eventId)
 
-export const getRegistrationInform = (params: RegostratopmReq) => request.get("/eventregistrations/getById/" + params.eventId)
+export const getRegistrationInform = (params: RegistrationReq) => request.get("/eventregistrations/getById/" + params.eventId)
 
-export const updateRegistrationInform = (params: RegostratopmReq) => request.post("/eventregistrations/update", params)
+export const updateRegistrationInform = (params: RegistrationReq) => request.post("/eventregistrations/update", params)
 
 export const addAttendee = (params: AttendeeReq) => request.post("/events/add" + params)
 
