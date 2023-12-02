@@ -1,6 +1,6 @@
-import { memo } from 'react';
-import type { FC } from 'react';
 import { Link } from "react-router-dom";
+import { Input, Button } from 'antd';
+import React, { useState, useEffect } from 'react';
 
 import 'reset-css';
 import classes from './ListOfEvent.module.css';
@@ -26,10 +26,27 @@ import { Rectangle29Icon } from './Rectangle29Icon.js';
 import NavigationBar from '@/componets/NavigationBar.js';
 import { Background } from '@/componets/Background.js';
 
-interface Props {
-  className?: string;
+interface Event {
+  id: string;
+  title: string;
+  description: string;
 }
-export const ListOfEvent: FC<Props> = memo(function ListOfEvent(props = {}) {
+
+export const ListOfEvent: React.FC = () => {
+
+  const [events, setEvents] = useState<Event[]>([]);
+
+  useEffect(() => {
+    fetch('your-backend-endpoint/events/random?count=6')
+      .then((response) => response.json())
+      .then((data: Event[]) => {
+        setEvents(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching events:', error);
+      });
+  }, []);
+
   return (
     <div>
       <Background />
@@ -50,22 +67,24 @@ export const ListOfEvent: FC<Props> = memo(function ListOfEvent(props = {}) {
           <p></p>
         </div>
       </div>
-      <div className={classes.rectangle282}>
-        <Rectangle28Icon2 className={classes.icon4} />
-      </div>
-      <div className={classes.rectangle292}>
-        <Rectangle29Icon2 className={classes.icon5} />
-      </div>
-      <div className={classes.rectangle162}>
-        <Rectangle16Icon2 className={classes.icon6} />
-      </div>
-      <div className={classes.moreInfo2}>More Info</div>
-      <div className={classes.event12}>
-        <div className={classes.textBlock3}>Event 1:</div>
-        <div className={classes.textBlock4}>
-          <p></p>
+      {events.map((event) => (
+        <div className={classes.rectangle282}>
+          <Rectangle28Icon2 className={classes.icon4} />
         </div>
-      </div>
+        // <div className={classes.rectangle292}>
+        //   <Rectangle29Icon2 className={classes.icon5} />
+        // </div>
+        // <div className={classes.rectangle162}>
+        //   <Rectangle16Icon2 className={classes.icon6} />
+        // </div>
+        // <div className={classes.moreInfo2}>More Info</div>
+        // <div className={classes.event12}>
+        //   <div className={classes.textBlock3}>Event 1:</div>
+        //   <div className={classes.textBlock4}>
+        //     <p>{event.description}</p>
+        //   </div>
+        // </div>
+      ))}
       <div className={classes.rectangle283}>
         <Rectangle28Icon3 className={classes.icon7} />
       </div>
@@ -130,10 +149,9 @@ export const ListOfEvent: FC<Props> = memo(function ListOfEvent(props = {}) {
           <p></p>
         </div>
       </div>
-      <div className={classes.rectangle7}></div>
       <div className={classes.image3}></div>
-      <div className={classes.enterZipCodeForAnEvent}>Enter Zip-Code for an Event</div>
+      <Input placeholder='Enter Zip-Code for an Event' className={classes.enterZipCodeForAnEvent} />
       <div className={classes.eventsAvailable}>events available:</div>
     </div>
   );
-});
+};
