@@ -13,14 +13,56 @@ interface LoginAPIRes {
   token: string;
 }
 
-interface RegisterReq {
-  username: string;
+// requests for user api
+interface UserReq {
+  userId: string;
+  userName: string;
   email: string;
   password: string;
   firstname: string;
   lastname: string;
-  pwdConfirm: string;
+  zipCode: string;
   university: string;
   universityId: string;
-  tay: string;
+  age: string;
+  description: string;
+}
+
+//respond
+interface RegisterRes {
+  token: string;
+}
+
+// requests for event api
+interface EventReq {
+  eventId: string;
+  userId: string;
+  eventName: string;
+  eventDetails: string;
+  eventDate: Date;
+  location: string;
+  zipCode: string;
+}
+
+// requests for event registration api
+interface RegistrationReq {
+  registrationId: string;
+  eventId: string;
+  userId: string;
+  registrationStatus: string;
+  confirmationEmailSent: boolean;
+}
+
+// requests for attendee api
+interface AttendeeReq {
+  userId: string;
+  eventId: string;
+  registrationStatus: string;
+  attendeeRating: number;
+}
+
+// requests for host api 
+interface HostReq {
+  userId: string;
+  eventId: string;
 }

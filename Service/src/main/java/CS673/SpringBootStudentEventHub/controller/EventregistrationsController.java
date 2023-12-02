@@ -29,12 +29,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/eventregistrations")
+@CrossOrigin(origins = "*")
 public class EventregistrationsController {
     @Autowired
     private IEventregistrationsService eventregistrationsService;
 
     /**
      * 查询分页数据
+     * search page data
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")
@@ -46,6 +48,7 @@ public class EventregistrationsController {
 
     /**
      * 根据id查询
+     * get event registration case following the case id
      */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
@@ -56,6 +59,7 @@ public class EventregistrationsController {
 
     /**
      * 新增
+     * create a new event registration case
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -65,6 +69,7 @@ public class EventregistrationsController {
 
     /**
      * 删除
+     * delete event registration case
      */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
@@ -74,6 +79,7 @@ public class EventregistrationsController {
 
     /**
      * 修改
+     * edit / update event registration information
      */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)

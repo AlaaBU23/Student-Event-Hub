@@ -29,12 +29,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/hosts")
+@CrossOrigin(origins = "*")
 public class HostsController {
     @Autowired
     private IHostsService hostsService;
 
     /**
      * 查询分页数据
+     *
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")

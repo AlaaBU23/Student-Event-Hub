@@ -29,12 +29,14 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/eventgroups")
+@CrossOrigin(origins = "*")
 public class EventgroupsController {
     @Autowired
     private IEventgroupsService eventgroupsService;
 
     /**
      * 查询分页数据
+     * search page data
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")
@@ -46,6 +48,7 @@ public class EventgroupsController {
 
     /**
      * 根据id查询
+     * get event group information by group id
      */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
@@ -56,6 +59,7 @@ public class EventgroupsController {
 
     /**
      * 新增
+     * add new event group
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -65,6 +69,7 @@ public class EventgroupsController {
 
     /**
      * 删除
+     * delete event group
      */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
@@ -74,6 +79,7 @@ public class EventgroupsController {
 
     /**
      * 修改
+     * edit / update event group information
      */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)
