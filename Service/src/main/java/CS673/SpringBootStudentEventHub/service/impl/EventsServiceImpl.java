@@ -165,7 +165,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
      * @return
      */
     private void fillingAddParams(EventsAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getEventId())) {
             queryVO.setEventId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +177,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
      * @return
      */
     private void fillingUpdateParams(EventsUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getEventId())) {
             queryVO.setEventId(String.valueOf(snowFlakeHelper.genId()));
         }

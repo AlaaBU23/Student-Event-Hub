@@ -1,6 +1,6 @@
 //requset
 interface LoginAPIReq {
-  username: string;
+  userName: string;
   password: string;
   code: string;
   uuid: string;
@@ -10,7 +10,7 @@ interface LoginAPIReq {
 interface LoginAPIRes {
   msg: string;
   code: number;
-  token: string;
+  data: string;
 }
 
 // requests for user api
@@ -19,8 +19,8 @@ interface UserReq {
   userName: string;
   email: string;
   password: string;
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   zipCode: string;
   university: string;
   universityId: string;

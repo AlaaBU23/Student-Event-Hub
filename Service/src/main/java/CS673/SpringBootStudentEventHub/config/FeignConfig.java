@@ -14,7 +14,7 @@ public class FeignConfig {
     private ObjectFactory<HttpMessageConverters> messageConverters;
 
     /**
-     * 配置FeignClient编译器，支持文件类型的传输
+     * Configuring the FeignClient compiler to support file type transfers
      *
      * @return
      */
@@ -24,7 +24,7 @@ public class FeignConfig {
     }
 
     /**
-     * 开启Feign日志输出
+     * Enable Feign log output
      *
      * @return
      */

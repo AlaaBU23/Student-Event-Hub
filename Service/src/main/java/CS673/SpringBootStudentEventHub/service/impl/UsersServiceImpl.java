@@ -218,7 +218,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
      * @return
      */
     private void fillingAddParams(UsersAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getUserId())) {
             queryVO.setUserId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -230,7 +230,7 @@ public class UsersServiceImpl extends ServiceImpl<UsersMapper, UsersPO> implemen
      * @return
      */
     private void fillingUpdateParams(UsersUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getUserId())) {
             queryVO.setUserId(String.valueOf(snowFlakeHelper.genId()));
         }

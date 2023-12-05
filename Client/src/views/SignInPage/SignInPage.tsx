@@ -12,6 +12,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from 'react'
 // get data
 import { LoginAPI, registerUser } from '@/requset/api.js'
+import axios from 'axios';
+import { config } from 'process';
 
 interface Props {
   className?: string;
@@ -67,6 +69,7 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     }
     else {
         await registerUser({
+                userId: "",
                 userName: username2Val,
                 email: emailVal,
                 password: password2Val,
@@ -97,17 +100,29 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     if (!usernameVal.trim() || !passwordVal.trim()) {
       alert("please input information!")
     }
-    let LoginAPIRes = await LoginAPI({
-      userName: usernameVal,
-      password: passwordVal,
-      code: "200",
-      uuid: localStorage.getItem("uuid") as string
-    })
-    if (LoginAPIRes.code === 200) {
-      alert("success login")
-      localStorage.setItem("token", LoginAPIRes.token)
-      navigateto("/landingpage")
-      localStorage.removeItem("uuid")
+    else{
+      let LoginAPIRes = await LoginAPI({
+        userName: usernameVal,
+        password: passwordVal,
+        code: "200",
+        uuid: localStorage.getItem("uuid") as string
+      })
+      if (LoginAPIRes.code === 200) {
+        alert("success login")
+        localStorage.setItem("token", LoginAPIRes.data)
+        axios.interceptors.request.use(
+          config => {
+            console.log(LoginAPIRes.data);
+            config.headers.Authorization = `${LoginAPIRes.data}`;
+            return config;
+          },
+          error => {
+            return Promise.reject(error);
+          }
+        );
+        navigateto("/landingpage")
+        localStorage.removeItem("uuid")
+      } 
     }
 
   }

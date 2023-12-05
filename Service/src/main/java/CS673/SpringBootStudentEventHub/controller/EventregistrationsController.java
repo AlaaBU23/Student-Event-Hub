@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 前端控制器
+ * Front-end controller
  * </p>
  *
  * @author yilin
@@ -35,7 +35,6 @@ public class EventregistrationsController {
     private IEventregistrationsService eventregistrationsService;
 
     /**
-     * 查询分页数据
      * search page data
      */
     @ApiOperation(value = "查询分页数据")
@@ -47,7 +46,6 @@ public class EventregistrationsController {
 
 
     /**
-     * 根据id查询
      * get event registration case following the case id
      */
     @ApiOperation(value = "根据id查询数据")
@@ -58,7 +56,6 @@ public class EventregistrationsController {
     }
 
     /**
-     * 新增
      * create a new event registration case
      */
     @ApiOperation(value = "新增数据")
@@ -68,7 +65,6 @@ public class EventregistrationsController {
     }
 
     /**
-     * 删除
      * delete event registration case
      */
     @ApiOperation(value = "删除数据")
@@ -78,7 +74,6 @@ public class EventregistrationsController {
     }
 
     /**
-     * 修改
      * edit / update event registration information
      */
     @ApiOperation(value = "更新数据")

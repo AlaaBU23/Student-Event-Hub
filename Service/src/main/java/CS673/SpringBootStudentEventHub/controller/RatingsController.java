@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 前端控制器
+ * Front-end controller
  * </p>
  *
  * @author yilin
@@ -35,7 +35,7 @@ public class RatingsController {
     private IRatingsService ratingsService;
 
     /**
-     * 查询分页数据
+     * get page data
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")
@@ -46,7 +46,7 @@ public class RatingsController {
 
 
     /**
-     * 根据id查询
+     * get Rating information by id
      */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
@@ -56,7 +56,7 @@ public class RatingsController {
     }
 
     /**
-     * 新增
+     * add a new rating case
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -65,7 +65,7 @@ public class RatingsController {
     }
 
     /**
-     * 删除
+     * delete rating case by id
      */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
@@ -74,7 +74,7 @@ public class RatingsController {
     }
 
     /**
-     * 修改
+     * update rating case
      */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)

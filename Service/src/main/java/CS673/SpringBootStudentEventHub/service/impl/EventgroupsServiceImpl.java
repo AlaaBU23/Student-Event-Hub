@@ -165,7 +165,7 @@ public class EventgroupsServiceImpl extends ServiceImpl<EventgroupsMapper, Event
      * @return
      */
     private void fillingAddParams(EventgroupsAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getGroupId())) {
             queryVO.setGroupId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +177,7 @@ public class EventgroupsServiceImpl extends ServiceImpl<EventgroupsMapper, Event
      * @return
      */
     private void fillingUpdateParams(EventgroupsUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getGroupId())) {
             queryVO.setGroupId(String.valueOf(snowFlakeHelper.genId()));
         }

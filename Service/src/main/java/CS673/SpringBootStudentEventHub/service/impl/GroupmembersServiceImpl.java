@@ -165,7 +165,7 @@ public class GroupmembersServiceImpl extends ServiceImpl<GroupmembersMapper, Gro
      * @return
      */
     private void fillingAddParams(GroupmembersAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getGroupId())) {
             queryVO.setGroupId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +177,7 @@ public class GroupmembersServiceImpl extends ServiceImpl<GroupmembersMapper, Gro
      * @return
      */
     private void fillingUpdateParams(GroupmembersUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getGroupId())) {
             queryVO.setGroupId(String.valueOf(snowFlakeHelper.genId()));
         }
