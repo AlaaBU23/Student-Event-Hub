@@ -1,4 +1,6 @@
+import axios from "axios";
 import request from "./index"
+import { Result } from "antd";
 
 const API_BASE_URL = 'http://192.168.5.229:8080';
 
@@ -17,6 +19,26 @@ const API_BASE_URL = 'http://192.168.5.229:8080';
 //
 //   return response.json();
 // };
+
+export const getLoginUserInform = async () => {
+    await request.get("/users/currentuser",{
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }).then((result)=>{
+        localStorage.setItem("userId", result.data.userId)
+        localStorage.setItem("userName", result.data.userName)
+        localStorage.setItem("firstName", result.data.firstName)
+        localStorage.setItem("lastName", result.data.lastName)
+        localStorage.setItem("email", result.data.email)
+        localStorage.setItem("zipCode", result.data.zipCode)
+        localStorage.setItem("university", result.data.university)
+        localStorage.setItem("universityId", result.data.universityId)
+        localStorage.setItem("age", result.data.age)
+        localStorage.setItem("description", result.data.description)
+    })
+}
+
 
 export const registerUser = (params: UserReq) => request.post("/users/add", params)
 

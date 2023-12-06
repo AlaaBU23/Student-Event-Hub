@@ -11,9 +11,7 @@ import { Background } from '@/componets/Background.js';
 import { Link, useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from 'react'
 // get data
-import { LoginAPI, registerUser } from '@/requset/api.js'
-import axios from 'axios';
-import { config } from 'process';
+import { LoginAPI, getLoginUserInform, registerUser } from '@/requset/api.js'
 
 interface Props {
   className?: string;
@@ -97,6 +95,7 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     setPasswordVal(e.target.value)
   }
   const goLogin = async () => {
+    console.log(localStorage.getItem('userId'))
     if (!usernameVal.trim() || !passwordVal.trim()) {
       alert("please input information!")
     }
@@ -110,17 +109,8 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
       if (LoginAPIRes.code === 200) {
         alert("success login")
         localStorage.setItem("token", LoginAPIRes.data)
-        axios.interceptors.request.use(
-          config => {
-            console.log(LoginAPIRes.data);
-            config.headers.Authorization = `${LoginAPIRes.data}`;
-            return config;
-          },
-          error => {
-            return Promise.reject(error);
-          }
-        );
         navigateto("/landingpage")
+        getLoginUserInform()
         localStorage.removeItem("uuid")
       } 
     }
