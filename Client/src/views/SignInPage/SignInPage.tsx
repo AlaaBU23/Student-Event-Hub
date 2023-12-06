@@ -11,7 +11,7 @@ import { Background } from '@/componets/Background.js';
 import { Link, useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from 'react'
 // get data
-import { LoginAPI, registerUser } from '@/requset/api.js'
+import { LoginAPI, getLoginUserInform, registerUser } from '@/requset/api.js'
 
 interface Props {
   className?: string;
@@ -65,18 +65,23 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     if (!username2Val.trim() || !password2Val.trim() || !emailVal.trim() || !firstnameVal.trim() || !lastnameVal.trim() || !ageVal.trim() || !zipcodeVal.trim() || !universityVal.trim() || !universityIdVal.trim() || !tayVal.trim()) {
       alert("please input information!")
     }
-    await registerUser({
-        userName: username2Val,
-        email: emailVal,
-        password: password2Val,
-        firstName: firstnameVal,
-        lastName: lastnameVal,
-        zipCode: zipcodeVal,
-        university: universityVal,
-        universityId: universityIdVal,
-        age: ageVal,
-        description: tayVal
-    })
+    else {
+        await registerUser({
+                userId: "",
+                userName: username2Val,
+                email: emailVal,
+                password: password2Val,
+                firstName: firstnameVal,
+                lastName: lastnameVal,
+                zipCode: zipcodeVal,
+                university: universityVal,
+                universityId: universityIdVal,
+                age: ageVal,
+                description: tayVal
+            })
+        alert("Sign up successfully!")
+        navigateto("/landingpage")
+    }
   }
 
   //login function
@@ -90,20 +95,24 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     setPasswordVal(e.target.value)
   }
   const goLogin = async () => {
+    console.log(localStorage.getItem('userId'))
     if (!usernameVal.trim() || !passwordVal.trim()) {
       alert("please input information!")
     }
-    let LoginAPIRes = await LoginAPI({
-      userName: usernameVal,
-      password: passwordVal,
-      code: "200",
-      uuid: localStorage.getItem("uuid") as string
-    })
-    if (LoginAPIRes.code === 200) {
-      alert("success login")
-      localStorage.setItem("token", LoginAPIRes.token)
-      navigateto("/landingpage")
-      localStorage.removeItem("uuid")
+    else{
+      let LoginAPIRes = await LoginAPI({
+        userName: usernameVal,
+        password: passwordVal,
+        code: "200",
+        uuid: localStorage.getItem("uuid") as string
+      })
+      if (LoginAPIRes.code === 200) {
+        alert("success login")
+        localStorage.setItem("token", LoginAPIRes.data)
+        navigateto("/landingpage")
+        getLoginUserInform()
+        localStorage.removeItem("uuid")
+      } 
     }
 
   }

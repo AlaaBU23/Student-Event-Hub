@@ -12,7 +12,7 @@ import CS673.SpringBootStudentEventHub.mapper.GroupmembersMapper;
 
 /**
  * <p>
- * $!{table.comment} 服务类
+ * $!{table.comment} service class
  * </p>
  *
  * @author yilin

@@ -33,7 +33,7 @@ public class FeignConfiguration implements RequestInterceptor {
                     String name = headerNames.nextElement();
                     String values = request.getHeader(name);
 
-                    // 跳过 content-length, 防止RPC时参数长度与请求时不一致
+                    // Skip content-length, to prevent the length of parameters in RPC from being inconsistent with the length of the request.
                     if ("content-length".equalsIgnoreCase(name)) {
                         continue;
                     }

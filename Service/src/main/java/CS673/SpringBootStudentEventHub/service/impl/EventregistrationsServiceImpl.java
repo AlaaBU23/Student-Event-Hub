@@ -165,7 +165,7 @@ public class EventregistrationsServiceImpl extends ServiceImpl<Eventregistration
      * @return
      */
     private void fillingAddParams(EventregistrationsAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getRegistrationId())) {
             queryVO.setRegistrationId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +177,7 @@ public class EventregistrationsServiceImpl extends ServiceImpl<Eventregistration
      * @return
      */
     private void fillingUpdateParams(EventregistrationsUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getRegistrationId())) {
             queryVO.setRegistrationId(String.valueOf(snowFlakeHelper.genId()));
         }

@@ -165,7 +165,7 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
      * @return
      */
     private void fillingAddParams(RatingsAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getRatingId())) {
             queryVO.setRatingId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +177,7 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
      * @return
      */
     private void fillingUpdateParams(RatingsUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getRatingId())) {
             queryVO.setRatingId(String.valueOf(snowFlakeHelper.genId()));
         }

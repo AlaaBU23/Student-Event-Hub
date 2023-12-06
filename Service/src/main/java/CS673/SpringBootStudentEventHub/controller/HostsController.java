@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 前端控制器
+ * Front-end controller
  * </p>
  *
  * @author yilin
@@ -35,7 +35,8 @@ public class HostsController {
     private IHostsService hostsService;
 
     /**
-     * 查询分页数据
+     * get page data
+     *
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")
@@ -46,7 +47,7 @@ public class HostsController {
 
 
     /**
-     * 根据id查询
+     * get host information by userId
      */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
@@ -56,7 +57,7 @@ public class HostsController {
     }
 
     /**
-     * 新增
+     * add new host
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -65,7 +66,7 @@ public class HostsController {
     }
 
     /**
-     * 删除
+     * delete host
      */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del/{Id}",method = RequestMethod.DELETE)
@@ -74,7 +75,7 @@ public class HostsController {
     }
 
     /**
-     * 修改
+     * update host information
      */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)

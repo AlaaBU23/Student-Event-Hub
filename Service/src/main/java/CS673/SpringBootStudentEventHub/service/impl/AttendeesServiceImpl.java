@@ -165,7 +165,7 @@ public class AttendeesServiceImpl extends ServiceImpl<AttendeesMapper, Attendees
      * @return
      */
     private void fillingAddParams(AttendeesAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getUserId())) {
             queryVO.setUserId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +177,7 @@ public class AttendeesServiceImpl extends ServiceImpl<AttendeesMapper, Attendees
      * @return
      */
     private void fillingUpdateParams(AttendeesUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getUserId())) {
             queryVO.setUserId(String.valueOf(snowFlakeHelper.genId()));
         }
