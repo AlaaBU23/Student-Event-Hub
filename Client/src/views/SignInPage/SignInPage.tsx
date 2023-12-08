@@ -11,7 +11,7 @@ import { Background } from '@/componets/Background.js';
 import { Link, useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from 'react'
 // get data
-import { LoginAPI, getLoginUserInform, registerUser } from '@/requset/api.js'
+import { LoginAPI, getLoginUserInform, initLocalInform, registerUser } from '@/requset/api.js'
 
 interface Props {
   className?: string;
@@ -95,7 +95,10 @@ export const SignInPage: FC<Props> = memo(function SignInPage(props = {}) {
     setPasswordVal(e.target.value)
   }
   const goLogin = async () => {
-    console.log(localStorage.getItem('userId'))
+    if (localStorage.getItem('token') != null){
+      logoutAPI();
+      localStorage.clear();
+    }
     if (!usernameVal.trim() || !passwordVal.trim()) {
       alert("please input information!")
     }

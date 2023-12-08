@@ -10,6 +10,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import CS673.SpringBootStudentEventHub.mapper.EventsMapper;
 
+import java.util.List;
+
 /**
  * <p>
  * $!{table.comment} service class
@@ -28,5 +30,7 @@ public interface IEventsService extends IService<EventsPO> {
     public EventsRespVO updateEvents(EventsUpdateReqVO Events_UpdateReqVO);
 
     public Integer deleteEventsList(EventsBatchReqVO Events_BatchReqVO);
+
+    public List<EventsRespVO> getEventListByZipcode(String zipCode);
 
 }

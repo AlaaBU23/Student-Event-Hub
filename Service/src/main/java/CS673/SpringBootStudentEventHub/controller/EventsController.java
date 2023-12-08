@@ -56,6 +56,15 @@ public class EventsController {
     }
 
     /**
+     * get event list following zipcode
+     */
+    @ApiOperation(value = "get event list following zipcode")
+    @RequestMapping(value = "/getEventListById/{zipCode}", method = RequestMethod.GET)
+    public List<EventsRespVO> getEventListByZipcode (@PathVariable String zipCode){
+        return eventsService.getEventListByZipcode(zipCode);
+    }
+
+    /**
      * create an event by host
      */
     @ApiOperation(value = "新增数据")
