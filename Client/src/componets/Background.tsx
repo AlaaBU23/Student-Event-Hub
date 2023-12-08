@@ -7,7 +7,7 @@ interface Props {
 }
 export const Background: FC<Props> = memo(function Background(props = {}) {
   return (
-    <div>
+    <div className={classes.background}>
           <div className={classes.rectangle6}>
           <div className={classes.image6}></div>
           <div className={classes.image7}></div>

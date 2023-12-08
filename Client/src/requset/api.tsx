@@ -39,6 +39,14 @@ export const getLoginUserInform = async () => {
     })
 }
 
+export const logoutAPI = async () => {
+    await result.get("/users//logout"){
+        headers: {
+            Authorization: localStorage.getItem('token')
+        }
+    }
+}
+
 
 export const registerUser = (params: UserReq) => request.post("/users/add", params)
 

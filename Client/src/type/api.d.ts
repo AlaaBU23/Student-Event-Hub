@@ -1,4 +1,4 @@
-//requset
+//request
 interface LoginAPIReq {
   userName: string;
   password: string;
