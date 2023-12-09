@@ -44,7 +44,6 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
         return vo;
     }
 
-    @Override
     public List<EventsRespVO> getEventListByZipcode(String zipCode) {
         List<EventsRespVO> vo = new ArrayList<>();
         if(StringUtils.isNotBlank(zipCode)) {
