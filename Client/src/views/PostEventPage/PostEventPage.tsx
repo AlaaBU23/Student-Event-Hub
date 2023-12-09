@@ -10,6 +10,8 @@ import { Rectangle15Icon } from './Rectangle15Icon.js';
 import NavigationBar from '@/componets/NavigationBar.js';
 import { Background } from '@/componets/Background.js';
 import { ChangeEvent, useState } from 'react'
+import { addEvent } from '@/requset/api.js';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   className?: string;
@@ -21,6 +23,7 @@ export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) 
   const [addressVal, setaddressVal] = useState("");
   const [zipcodeVal, setzipcodeVal] = useState("");
   const [eventdetailsVal, seteventdetailsVal] = useState("");
+  let navigateto = useNavigate();
 
   const eventnameChange = (e: ChangeEvent<HTMLInputElement>) => {
     seteventnameVal(e.target.value)
@@ -41,6 +44,22 @@ export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) 
   const gopost = async () => {
     if (!eventnameVal.trim() || !datatimeVal.trim() || !addressVal.trim() || !zipcodeVal.trim() || !eventdetailsVal.trim()) {
       alert('please input information')
+    }
+    else if (localStorage.getItem('userId') != null){
+      await addEvent({
+        eventId: '',
+        userId: localStorage.getItem('userId'),
+        eventName: eventnameVal,
+        eventDetails: eventdetailsVal,
+        eventDate: new Date(datatimeVal),
+        location: addressVal,
+        zipCode: zipcodeVal,
+      })
+      alert("Event posted successfully!")
+      navigateto("/landingpage")
+    }
+    else {
+      alert("Login first!")
     }
   }
   return (

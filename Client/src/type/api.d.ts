@@ -36,7 +36,7 @@ interface RegisterRes {
 // requests for event api
 interface EventReq {
   eventId: string;
-  userId: string;
+  userId: string | null;
   eventName: string;
   eventDetails: string;
   eventDate: Date;
