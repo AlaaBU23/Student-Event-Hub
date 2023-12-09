@@ -11,7 +11,7 @@ import { Background } from '@/componets/Background.js';
 import { Link, useNavigate } from "react-router-dom";
 import { ChangeEvent, useState } from 'react'
 // get data
-import { LoginAPI, getLoginUserInform, initLocalInform, registerUser } from '@/requset/api.js'
+import { LoginAPI, getLoginUserInform, logoutAPI, registerUser } from '@/requset/api.js'
 
 interface Props {
   className?: string;

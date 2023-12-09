@@ -40,7 +40,7 @@ export const getLoginUserInform = async () => {
 }
 
 export const logoutAPI = async () => {
-    await result.get("/users//logout"){
+    await request.get("/users/logout"),{
         headers: {
             Authorization: localStorage.getItem('token')
         }
@@ -65,6 +65,8 @@ export const deleteEvent = (params: EventReq) => request.delete("/events/del/" +
 export const getEventInform = (params: EventReq) => request.get("/events/getById/" + params.eventId)
 
 export const updateEventInform = (params: EventReq) => request.post("/events/update", params)
+
+export const getEventListByZipcode = (params: EventReq) => request.get("/events/getEventListById/" + params.zipCode)
 
 export const addRegistration = (params: RegistrationReq) => request.post("/eventregistrations/add" + params)
 
