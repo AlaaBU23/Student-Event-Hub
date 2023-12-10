@@ -82,4 +82,10 @@ public class RatingsController {
         return ratingsService.updateRatings(UpdateReqVO);
     }
 
+    @ApiOperation(value = "计算评分")
+    @RequestMapping(value = "/calculate", method = RequestMethod.POST)
+    public Integer calc(@PathVariable String Id) {
+        ratingsService.CalculateRating(Id);
+        return 1;
+    }
 }
