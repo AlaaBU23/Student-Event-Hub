@@ -1,24 +1,6 @@
 import axios from "axios";
 import request from "./index"
-import { Result } from "antd";
 
-const API_BASE_URL = 'http://192.168.5.229:8080';
-
-// export const registerUser = async (data: RegisterReq) => {
-//   const response = await fetch(`${API_BASE_URL}/add`, {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(data),
-//   });
-//
-//   if (!response.ok) {
-//     throw new Error('Registration failed');
-//   }
-//
-//   return response.json();
-// };
 
 export const getLoginUserInform = async () => {
     await request.get("/users/currentuser",{
@@ -40,7 +22,7 @@ export const getLoginUserInform = async () => {
 }
 
 export const logoutAPI = async () => {
-    await result.get("/users//logout"){
+    await request.get("/users/logout"),{
         headers: {
             Authorization: localStorage.getItem('token')
         }
@@ -58,13 +40,15 @@ export const getUserInform = (params: UserReq) => request.get("/users/getById/" 
 
 export const deleteUser = (params: UserReq) => request.delete("/users/del/" + params.userId)
 
-export const addEvent = (params: EventReq) => request.post("/events/add" + params)
+export const addEvent = (params: EventReq) => request.post("/events/add", params)
 
 export const deleteEvent = (params: EventReq) => request.delete("/events/del/" + params.eventId)
 
 export const getEventInform = (params: EventReq) => request.get("/events/getById/" + params.eventId)
 
 export const updateEventInform = (params: EventReq) => request.post("/events/update", params)
+
+export const getEventListByZipcode = (params: EventReq) => request.get("/events/getEventListById/" + params.zipCode)
 
 export const addRegistration = (params: RegistrationReq) => request.post("/eventregistrations/add" + params)
 

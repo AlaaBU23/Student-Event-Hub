@@ -96,17 +96,77 @@
   flex-direction: column;
 }
 
-.address1 {
+.input1 {
   color: #000;
   font-size: 30px;
   line-height: 100%;
   font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
   position: absolute;
-  left: 330px;
-  top: 380px;
+  left: 380px;
+  top: 297px;
   width: 600px;
   height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input2 {
+  color: #000;
+  font-size: 30px;
+  line-height: 100%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 430px;
+  top: 340px;
+  width: 550px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input3 {
+  color: #000;
+  font-size: 30px;
+  line-height: 100%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 320px;
+  top: 385px;
+  width: 660px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input4 {
+  color: #000;
+  font-size: 30px;
+  line-height: 100%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 390px;
+  top: 430px;
+  width: 590px;
+  height: 40px;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input5 {
+  color: #000;
+  font-size: 30px;
+  line-height: 100%;
+  font-family: Inconsolata, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  position: absolute;
+  left: 170px;
+  top: 660px;
+  width: 1580px;
+  height: 280px;
   justify-content: center;
   flex-direction: column;
 }
@@ -160,13 +220,14 @@
   position: absolute;
   left: 1574px;
   top: 359px;
-  width: 115px;
-  height: 44px;
   align-items: center;
-  padding: 13.5px 23px;
+  padding: 30px 23px;
   border-radius: 8px;
   background-color: #b6f;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .post2 {
@@ -175,10 +236,6 @@
   line-height: 120%;
   font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     'Liberation Sans', sans-serif;
-  width: 120.2504px;
-  height: 29.669px;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .pleaseIntroduceTheDetailsForYo {
