@@ -117,17 +117,14 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
         }
         return deleteCount;
     }
-    public Double CalculateRating(String id){
+    public List<Map<String,Object>> CalculateRating(String id){
         Double rate_ini = 0.0;
         RatingsRespVO vo = new RatingsRespVO();
-        if (StringUtils.isNotBlank(id)) {
-            QueryWrapper<RatingsPO> queryWrapper = new QueryWrapper<>();
-            queryWrapper.eq("rated_user_id", id);
-            queryWrapper.select("rating_value as RV");
-            List<Map<String,Object>> list = Ratings_Mapper.selectMaps(queryWrapper);
-            System.out.println(list);
-        }
-        return rate_ini;
+        QueryWrapper<RatingsPO> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("rated_user_id", id);
+        queryWrapper.select("rating_value as RV");
+        List<Map<String,Object>> list = Ratings_Mapper.selectMaps(queryWrapper);
+        return list;
     }
 
     /**

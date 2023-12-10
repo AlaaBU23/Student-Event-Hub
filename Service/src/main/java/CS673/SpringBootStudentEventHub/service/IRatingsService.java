@@ -10,6 +10,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 import CS673.SpringBootStudentEventHub.mapper.RatingsMapper;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * <p>
  * $!{table.comment} service class
@@ -29,5 +32,5 @@ public interface IRatingsService extends IService<RatingsPO> {
 
     public Integer deleteRatingsList(RatingsBatchReqVO Ratings_BatchReqVO);
 
-    public Double CalculateRating(String id);
+    public List<Map<String,Object>> CalculateRating(String id);
 }
