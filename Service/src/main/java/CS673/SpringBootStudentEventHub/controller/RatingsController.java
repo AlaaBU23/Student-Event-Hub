@@ -83,7 +83,7 @@ public class RatingsController {
     }
 
     @ApiOperation(value = "计算评分")
-    @RequestMapping(value = "/calculate", method = RequestMethod.POST)
+    @RequestMapping(value = "/calculate/{Id}", method = RequestMethod.POST)
     public Integer calc(@PathVariable String Id) {
         ratingsService.CalculateRating(Id);
         return 1;
