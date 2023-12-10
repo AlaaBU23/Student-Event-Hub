@@ -1,138 +1,88 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import type { FC } from 'react';
 import { Link } from "react-router-dom";
-
+import { Input, Button } from 'antd';
 import 'reset-css';
 import classes from './ListOfEvent.module.css';
-import { Rectangle16Icon2 } from './Rectangle16Icon2.js';
-import { Rectangle16Icon3 } from './Rectangle16Icon3.js';
-import { Rectangle16Icon4 } from './Rectangle16Icon4.js';
-import { Rectangle16Icon5 } from './Rectangle16Icon5.js';
-import { Rectangle16Icon6 } from './Rectangle16Icon6.js';
 import { Rectangle16Icon } from './Rectangle16Icon.js';
-import { Rectangle28Icon2 } from './Rectangle28Icon2.js';
-import { Rectangle28Icon3 } from './Rectangle28Icon3.js';
-import { Rectangle28Icon4 } from './Rectangle28Icon4.js';
-import { Rectangle28Icon5 } from './Rectangle28Icon5.js';
-import { Rectangle28Icon6 } from './Rectangle28Icon6.js';
 import { Rectangle28Icon } from './Rectangle28Icon.js';
-import { Rectangle29Icon2 } from './Rectangle29Icon2.js';
-import { Rectangle29Icon3 } from './Rectangle29Icon3.js';
-import { Rectangle29Icon4 } from './Rectangle29Icon4.js';
-import { Rectangle29Icon5 } from './Rectangle29Icon5.js';
-import { Rectangle29Icon6 } from './Rectangle29Icon6.js';
 import { Rectangle29Icon } from './Rectangle29Icon.js';
-
+import { getEventListByZipcode } from '@/requset/api.js';
 import NavigationBar from '@/componets/NavigationBar.js';
 import { Background } from '@/componets/Background.js';
 
 interface Props {
   className?: string;
 }
-export const ListOfEvent: FC<Props> = memo(function ListOfEvent(props = {}) {
+export const ListOfEvent: FC<Props> = memo(function ListOfEvent() {
+
+  const [zip, setZip] = useState('');
+  const [events, setEvent] = useState('');
+  const handleZip = () => {
+    setZip(zip);
+  }
+  const handleSubmit = () => {
+    const eventData = {
+      'zipCode': zip
+    };
+    getEventListByZipcode(eventData)
+      .then((data) => {
+        setEvent(JSON.parse(data));
+      })
+  }
+
   return (
     <div>
       <Background />
       <NavigationBar />
-      <div className={classes.rectangle28}>
-        <Rectangle28Icon className={classes.icon} />
-      </div>
-      <div className={classes.rectangle29}>
-        <Rectangle29Icon className={classes.icon2} />
-      </div>
-      <div className={classes.rectangle16}>
-        <Rectangle16Icon className={classes.icon3} />
-      </div>
-      <Link to="/attend" className={classes.moreInfo}>More Info</Link>
-      <div className={classes.event1}>
-        <div className={classes.textBlock}>Event 1:</div>
-        <div className={classes.textBlock2}>
-          <p></p>
+      {events.map((event) => {
+           <>
+           <div className={classes.rectangle28}>
+             <Rectangle28Icon className={classes.icon} />
+           </div>
+           <div className={classes.rectangle29}>
+             <Rectangle29Icon className={classes.icon2} />
+           </div>
+           <div className={classes.rectangle16}>
+             <Rectangle16Icon className={classes.icon3} />
+           </div>
+           <Link to="/attend" className={classes.moreInfo}>More Info</Link>
+           <div className={classes.event1}>
+             <div className={classes.textBlock}>Event </div>
+             <div className={classes.textBlock2} style={{display : 'flex' , flexDirection : 'column' , gap : '40px' , overflow : "scroll" , height : '120px'
+            }}>
+               <p>Event ID : {event.eventId}</p>
+               <p>Event Name : {event.eventName}</p>
+               <p>Event Date : {event.eventDate}</p>
+               <p>Event Location : {event.location}</p>
+               <p>Event Zip : {event.zipCode}</p>
+               <p>Event Details : {event.eventDetails}</p>
+             </div>
+           </div>
+         </>
+      })}
+      <>
+        <div className={classes.rectangle28}>
+          <Rectangle28Icon className={classes.icon} />
         </div>
-      </div>
-      <div className={classes.rectangle282}>
-        <Rectangle28Icon2 className={classes.icon4} />
-      </div>
-      <div className={classes.rectangle292}>
-        <Rectangle29Icon2 className={classes.icon5} />
-      </div>
-      <div className={classes.rectangle162}>
-        <Rectangle16Icon2 className={classes.icon6} />
-      </div>
-      <div className={classes.moreInfo2}>More Info</div>
-      <div className={classes.event12}>
-        <div className={classes.textBlock3}>Event 1:</div>
-        <div className={classes.textBlock4}>
-          <p></p>
+        <div className={classes.rectangle29}>
+          <Rectangle29Icon className={classes.icon2} />
         </div>
-      </div>
-      <div className={classes.rectangle283}>
-        <Rectangle28Icon3 className={classes.icon7} />
-      </div>
-      <div className={classes.rectangle293}>
-        <Rectangle29Icon3 className={classes.icon8} />
-      </div>
-      <div className={classes.rectangle163}>
-        <Rectangle16Icon3 className={classes.icon9} />
-      </div>
-      <div className={classes.moreInfo3}>More Info</div>
-      <div className={classes.event13}>
-        <div className={classes.textBlock5}>Event 1:</div>
-        <div className={classes.textBlock6}>
-          <p></p>
+        <div className={classes.rectangle16}>
+          <Rectangle16Icon className={classes.icon3} />
         </div>
-      </div>
-      <div className={classes.rectangle284}>
-        <Rectangle28Icon4 className={classes.icon10} />
-      </div>
-      <div className={classes.rectangle294}>
-        <Rectangle29Icon4 className={classes.icon11} />
-      </div>
-      <div className={classes.rectangle164}>
-        <Rectangle16Icon4 className={classes.icon12} />
-      </div>
-      <div className={classes.moreInfo4}>More Info</div>
-      <div className={classes.event14}>
-        <div className={classes.textBlock7}>Event 1:</div>
-        <div className={classes.textBlock8}>
-          <p></p>
+        <Link to="/attend" className={classes.moreInfo} data={events}>More Info</Link>
+        <div className={classes.event1}>
+          <div className={classes.textBlock}>Event </div>
+          <div className={classes.textBlock2}>
+            <p></p>
+          </div>
         </div>
+      </>
+      <div className={classes.enterZipCodeForAnEvent} style={{ display: 'flex', flexDirection: 'row' , gap : '30px' }}>
+        <Input placeholder="Please enter the zipcode"  onChange={handleZip} />
+        <Button onClick={handleSubmit}>Submit</Button>
       </div>
-      <div className={classes.rectangle285}>
-        <Rectangle28Icon5 className={classes.icon13} />
-      </div>
-      <div className={classes.rectangle295}>
-        <Rectangle29Icon5 className={classes.icon14} />
-      </div>
-      <div className={classes.rectangle165}>
-        <Rectangle16Icon5 className={classes.icon15} />
-      </div>
-      <div className={classes.moreInfo5}>More Info</div>
-      <div className={classes.event15}>
-        <div className={classes.textBlock9}>Event 1:</div>
-        <div className={classes.textBlock10}>
-          <p></p>
-        </div>
-      </div>
-      <div className={classes.rectangle286}>
-        <Rectangle28Icon6 className={classes.icon16} />
-      </div>
-      <div className={classes.rectangle296}>
-        <Rectangle29Icon6 className={classes.icon17} />
-      </div>
-      <div className={classes.rectangle166}>
-        <Rectangle16Icon6 className={classes.icon18} />
-      </div>
-      <div className={classes.moreInfo6}>More Info</div>
-      <div className={classes.event16}>
-        <div className={classes.textBlock11}>Event 1:</div>
-        <div className={classes.textBlock12}>
-          <p></p>
-        </div>
-      </div>
-      <div className={classes.rectangle7}></div>
-      <div className={classes.image3}></div>
-      <div className={classes.enterZipCodeForAnEvent}>Enter Zip-Code for an Event</div>
       <div className={classes.eventsAvailable}>events available:</div>
     </div>
   );
