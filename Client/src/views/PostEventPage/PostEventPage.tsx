@@ -7,13 +7,61 @@ import { Rectangle12Icon } from './Rectangle12Icon.js';
 import { Rectangle13Icon } from './Rectangle13Icon.js';
 import { Rectangle14Icon } from './Rectangle14Icon.js';
 import { Rectangle15Icon } from './Rectangle15Icon.js';
-import NavigationBar from '@/components/NavigationBar.js';
-import { Background } from '@/components/Background.js';
+import NavigationBar from '@/componets/NavigationBar.js';
+import { Background } from '@/componets/Background.js';
+import { ChangeEvent, useState } from 'react'
+import { addEvent } from '@/requset/api.js';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
   className?: string;
 }
 export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) {
+
+  const [eventnameVal, seteventnameVal] = useState("");
+  const [datatimeVal, setDataTimeVal] = useState("");
+  const [addressVal, setaddressVal] = useState("");
+  const [zipcodeVal, setzipcodeVal] = useState("");
+  const [eventdetailsVal, seteventdetailsVal] = useState("");
+  let navigateto = useNavigate();
+
+  const eventnameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    seteventnameVal(e.target.value)
+  }
+  const DataTimeChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setDataTimeVal(e.target.value)
+  }
+  const addressChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setaddressVal(e.target.value)
+  }
+  const zipcodeChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setzipcodeVal(e.target.value)
+  }
+  const eventdetailsChange = (e: ChangeEvent<HTMLInputElement>) => {
+    seteventdetailsVal(e.target.value)
+  }
+
+  const gopost = async () => {
+    if (!eventnameVal.trim() || !datatimeVal.trim() || !addressVal.trim() || !zipcodeVal.trim() || !eventdetailsVal.trim()) {
+      alert('please input information')
+    }
+    else if (localStorage.getItem('userId') != null){
+      await addEvent({
+        eventId: '',
+        userId: localStorage.getItem('userId'),
+        eventName: eventnameVal,
+        eventDetails: eventdetailsVal,
+        eventDate: new Date(datatimeVal),
+        location: addressVal,
+        zipCode: zipcodeVal,
+      })
+      alert("Event posted successfully!")
+      navigateto("/landingpage")
+    }
+    else {
+      alert("Login first!")
+    }
+  }
   return (
     <div>
       <Background />
@@ -25,7 +73,7 @@ export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) 
         <Rectangle15Icon className={classes.icon2} />
       </div>
       <div className={classes.eventDetails}>Event details:</div>
-      <Input type = "test" placeholder='Please input here' className={classes.detailsInput} />
+      <Input placeholder='Please input here' className={classes.input5} onChange={eventdetailsChange} />
       <div className={classes.rectangle12}>
         <Rectangle12Icon className={classes.icon3} />
       </div>
@@ -33,16 +81,16 @@ export const PostEventPage: FC<Props> = memo(function PostEventPage(props = {}) 
         <Rectangle13Icon className={classes.icon4} />
       </div>
       <div className={classes.address}>Address:</div>
-      <Input placeholder='Please input here' className={classes.addressInput} />
+      <Input placeholder='Please input here' className={classes.input1} onChange={eventnameChange} />
       <div className={classes.dateAndTime}>Date and Time:</div>
-      <Input placeholder='Please input here' className={classes.dateInput} />
+      <Input placeholder='Please input here' className={classes.input2} onChange={DataTimeChange} />
       <div className={classes.eventName}>Event name:</div>
-      <Input placeholder='Please input here' className={classes.nameInput} />
-      <div className={classes.zipCode}>Zip Code:</div>
-      <Input placeholder='Please input here' className={classes.zipcodeInput} />
-      <div className={classes.post}>
-        <div className={classes.post2}>Post</div>
-      </div>
+      <Input placeholder='Please input here' className={classes.input3} onChange={addressChange} />
+      <div className={classes.zipCodeID}>Zip Code ID:</div>
+      <Input placeholder='Please input here' className={classes.input4} onChange={zipcodeChange} />
+      <Button className={classes.post} onClick={gopost}>
+        <div className={classes.post2} >Post</div>
+      </Button>
       <div className={classes.pleaseIntroduceTheDetailsForYo}>Please introduce the details for your next event:</div>
       <div className={classes.createAnEvent}>Create An Event</div>
     </div>

@@ -16,6 +16,7 @@ import CS673.SpringBootStudentEventHub.service.IEventsService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import CS673.SpringBootStudentEventHub.mapper.EventsMapper;
@@ -39,6 +40,16 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
             QueryWrapper<EventsPO> queryWrapper = new QueryWrapper<>();
             queryWrapper.eq("event_id", id);
             vo = toVO(Events_Mapper.selectOne(queryWrapper));
+        }
+        return vo;
+    }
+
+    public List<EventsRespVO> getEventListByZipcode(String zipCode) {
+        List<EventsRespVO> vo = new ArrayList<>();
+        if(StringUtils.isNotBlank(zipCode)) {
+            QueryWrapper<EventsPO> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("zip_code", zipCode);
+            vo = toVOList(Events_Mapper.selectList(queryWrapper));
         }
         return vo;
     }
@@ -147,7 +158,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
 
 
     /**
-     * po转vo
+     * transfer po to vo
      *
      * @param po
      * @return vo
@@ -161,11 +172,22 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
     }
 
     /**
+     * transfer List<po> to List<vo>
+     */
+    private List<EventsRespVO> toVOList(List<EventsPO> po) {
+        List<EventsRespVO> vo = new ArrayList<>();
+        for(int i = 0; i < po.size(); i++){
+            vo.add(toVO(po.get(i)));
+        }
+        return vo;
+    }
+
+    /**
      * @param queryVO
      * @return
      */
     private void fillingAddParams(EventsAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getEventId())) {
             queryVO.setEventId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +199,7 @@ public class EventsServiceImpl extends ServiceImpl<EventsMapper, EventsPO> imple
      * @return
      */
     private void fillingUpdateParams(EventsUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getEventId())) {
             queryVO.setEventId(String.valueOf(snowFlakeHelper.genId()));
         }

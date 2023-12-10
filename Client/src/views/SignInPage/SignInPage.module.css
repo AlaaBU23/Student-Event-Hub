@@ -88,7 +88,7 @@
   position: absolute;
   left: 231px;
   top: 345.4497px;
-  width: 244.8371px;
+  width: 174.8371px;
   height: 39.5859px;
   outline: solid 1px #000;
   outline-offset: -1px;
@@ -99,9 +99,22 @@
 
 .rectangle12 {
   position: absolute;
-  left: 484.8584px;
+  left: 412.8584px;
   top: 345px;
-  width: 244.8371px;
+  width: 164.8371px;
+  height: 40px;
+  outline: solid 1px #000;
+  outline-offset: -1px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: inset 0px 4px 4px 0px #00000040;
+}
+
+.rectangle13 {
+  position: absolute;
+  left: 584.8584px;
+  top: 345px;
+  width: 144.8371px;
   height: 40px;
   outline: solid 1px #000;
   outline-offset: -1px;

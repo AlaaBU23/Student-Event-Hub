@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 前端控制器
+ * Front-end controller
  * </p>
  *
  * @author yilin
@@ -29,12 +29,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/events")
+@CrossOrigin(origins = "*")
 public class EventsController {
     @Autowired
     private IEventsService eventsService;
 
     /**
-     * 查询分页数据
+     * search page data
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")
@@ -45,7 +46,7 @@ public class EventsController {
 
 
     /**
-     * 根据id查询
+     * get event information following event id
      */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
@@ -55,7 +56,16 @@ public class EventsController {
     }
 
     /**
-     * 新增
+     * get event list following zipcode
+     */
+    @ApiOperation(value = "get event list following zipcode")
+    @RequestMapping(value = "/getEventListById/{zipCode}", method = RequestMethod.GET)
+    public List<EventsRespVO> getEventListByZipcode (@PathVariable String zipCode){
+        return eventsService.getEventListByZipcode(zipCode);
+    }
+
+    /**
+     * create an event by host
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -64,7 +74,7 @@ public class EventsController {
     }
 
     /**
-     * 删除
+     * delete an event
      */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
@@ -73,7 +83,7 @@ public class EventsController {
     }
 
     /**
-     * 修改
+     * edit / update event information
      */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)

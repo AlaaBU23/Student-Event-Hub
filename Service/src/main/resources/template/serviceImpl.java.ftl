@@ -167,7 +167,7 @@ public class ${entity}ServiceImpl extends ServiceImpl<${entity}Mapper, ${entity}
     * @return
     */
     private void fillingAddParams(${entity}AddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.get${entity}Id())) {
             queryVO.set${entity}Id(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -179,7 +179,7 @@ public class ${entity}ServiceImpl extends ServiceImpl<${entity}Mapper, ${entity}
     * @return
     */
     private void fillingUpdateParams(${entity}UpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.get${entity}Id())) {
             queryVO.set${entity}Id(String.valueOf(snowFlakeHelper.genId()));
         }

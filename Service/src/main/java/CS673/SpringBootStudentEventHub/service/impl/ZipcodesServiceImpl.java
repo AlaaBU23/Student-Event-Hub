@@ -165,7 +165,7 @@ public class ZipcodesServiceImpl extends ServiceImpl<ZipcodesMapper, ZipcodesPO>
      * @return
      */
     private void fillingAddParams(ZipcodesAddReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getZipCodeId())) {
             queryVO.setZipCodeId(String.valueOf(snowFlakeHelper.genId()));
         }
@@ -177,7 +177,7 @@ public class ZipcodesServiceImpl extends ServiceImpl<ZipcodesMapper, ZipcodesPO>
      * @return
      */
     private void fillingUpdateParams(ZipcodesUpdateReqVO queryVO) {
-        // TODO: 根据特性添加其它字段的定义
+        // TODO: Add definitions for other fields based on characteristics
         if (StringUtils.isBlank(queryVO.getZipCodeId())) {
             queryVO.setZipCodeId(String.valueOf(snowFlakeHelper.genId()));
         }

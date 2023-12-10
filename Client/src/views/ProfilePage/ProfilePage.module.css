@@ -88,7 +88,7 @@
 
 .rectangle30 {
   position: absolute;
-  left: 206.541px;
+  left: 256.541px;
   top: 366.9191px;
   width: 311.0744px;
   height: 301.2202px;
@@ -119,6 +119,50 @@
   width: 298px;
   height: 72px;
   flex-direction: column;
+}
+
+.textBlockFirstName {
+  color: #68eeff;
+  position: absolute;
+  top: 100px;
+  width: 298px;
+  height: 20px;
+  flex-direction: column;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlockLastName {
+  color: #68eeff;
+  position: absolute;
+  top: 150px;
+  width: 298px;
+  height: 20px;
+  flex-direction: column;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlockUniversity {
+  color: #68eeff;
+  position: absolute;
+  top: 200px;
+  width: 298px;
+  height: 20px;
+  flex-direction: column;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+
+.textBlockEmail {
+  color: #68eeff;
+  position: absolute;
+  top: 250px;
+  width: 298px;
+  height: 20px;
+  flex-direction: column;
+  font-family: Holtwood One SC, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
 }
 
 .textBlock {

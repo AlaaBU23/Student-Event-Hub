@@ -20,7 +20,7 @@ import java.util.Date;
 public class MybatisPlusConfig {
 
     /**
-     * pagehelper的分页插件
+     * Pagination plugin for pagehelper
      */
 //    @Bean
 //    public PageInterceptor pageInterceptor() {
@@ -28,21 +28,22 @@ public class MybatisPlusConfig {
 //    }
 
     /**
-     * 新的分页插件,一缓和二缓遵循mybatis的规则,需要设置 MybatisConfiguration#useDeprecatedExecutor = false 避免缓存出现问题
+     * new paging plug-ins , a slow and two slow to follow the rules of mybatis ,
+     * you need to set MybatisConfiguration#useDeprecatedExecutor = false to avoid caching problems .
      */
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
         interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         //   interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.ORACLE_12C));
-        //乐观锁
+        //Optimist Lock
         interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
         return interceptor;
     }
 
 
     /**
-     * 设置填充缺省值
+     * Setting Fill Defaults
      */
     @Bean
     public MetaObjectHandler autoFillMetaObjectHandler() {

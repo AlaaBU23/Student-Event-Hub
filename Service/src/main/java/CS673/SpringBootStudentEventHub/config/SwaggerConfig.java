@@ -39,7 +39,7 @@ public class SwaggerConfig implements ApplicationListener<WebServerInitializedEv
         try {
             String hostAddress = Inet4Address.getLocalHost().getHostAddress();
             int port = event.getWebServer().getPort();
-            log.info("项目启动成功！接口文档地址: http://" + hostAddress + ":" + port + "/doc.html");
+            log.info("Successful project launch！interface documentation address: http://" + hostAddress + ":" + port + "/doc.html");
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
@@ -50,7 +50,7 @@ public class SwaggerConfig implements ApplicationListener<WebServerInitializedEv
         return new ApiInfoBuilder()
                 .title("xxx")
                 .termsOfServiceUrl("xxx")
-                .contact(contact) // 高版本调用此重载方法
+                .contact(contact) // Higher versions call this overloaded method
                 .version("1.0")
                 .build();
     }
@@ -61,15 +61,15 @@ public class SwaggerConfig implements ApplicationListener<WebServerInitializedEv
         List<Parameter> pars = new ArrayList<>();
         ticketPar.name("Authorization").description("user token")
                 .modelRef(new ModelRef("string")).parameterType("header")
-                .required(false).build(); //header中的Authorization参数非必填，传空也可以
-        pars.add(ticketPar.build());    //根据每个方法名也知道当前方法在设置什么参数
-        return new Docket(DocumentationType.SWAGGER_2)      // 选择swagger2版本
+                .required(false).build(); //The Authorization parameter in the header is not required and can be passed empty.
+        pars.add(ticketPar.build());    //Each method name also tells you what parameters are being set by the current method.
+        return new Docket(DocumentationType.SWAGGER_2)      // Select swagger2 version
                 .apiInfo(apiInfo())
-                .enableUrlTemplating(true)//定义api文档汇总信息
+                .enableUrlTemplating(true)//Define api document summary information
                 .select()
-                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))    // 这里采用包含注解的方式来确定要显示的接口
+                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))    // The inclusion of annotations is used here to identify the interface to be displayed
                 .apis(RequestHandlerSelectors.basePackage("CS673.SpringBootStudentEventHub"))
-                .paths(PathSelectors.any())     // 指定所有路径
+                .paths(PathSelectors.any())     // Specify all paths
                 .build()
                 .ignoredParameterTypes(HttpSession.class, HttpServletRequest.class, HttpServletResponse.class)
                 .globalOperationParameters(pars);

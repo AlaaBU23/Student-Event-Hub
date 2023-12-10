@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 前端控制器
+ * Front-end controller
  * </p>
  *
  * @author yilin
@@ -30,12 +30,13 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {""})
 @RestController
 @RequestMapping("/users")
+@CrossOrigin(origins = "*")
 public class UsersController {
     @Autowired
     private IUsersService usersService;
 
     /**
-     * 查询分页数据
+     * get page data
      */
     @ApiOperation(value = "查询分页数据")
     @RequestMapping(value = "/list")
@@ -46,7 +47,7 @@ public class UsersController {
 
 
     /**
-     * 根据id查询
+     * get user information by id
      */
     @ApiOperation(value = "根据id查询数据")
     @RequestMapping(value = "/getById/{Id}", method = RequestMethod.GET)
@@ -56,7 +57,7 @@ public class UsersController {
     }
 
     /**
-     * 新增
+     * add new user
      */
     @ApiOperation(value = "新增数据")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -65,7 +66,7 @@ public class UsersController {
     }
 
     /**
-     * 删除
+     * delete user
      */
     @ApiOperation(value = "删除数据")
     @RequestMapping(value = "/del/{Id}", method = RequestMethod.DELETE)
@@ -74,7 +75,7 @@ public class UsersController {
     }
 
     /**
-     * 修改
+     * update user
      */
     @ApiOperation(value = "更新数据")
     @RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -82,18 +83,33 @@ public class UsersController {
         return usersService.updateUsers(UpdateReqVO);
     }
 
+    /**
+     * user login feature
+     * @param users
+     * @return
+     */
     @ApiOperation(value = "LogIn")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Result logIn(@RequestBody UsersAddReqVO users){
         return usersService.logIn(users);
     }
 
+    /**
+     * get user information by token
+     * @param token
+     * @return
+     */
     @ApiOperation(value = "CurrentUser")
     @RequestMapping(value = "/currentuser", method = RequestMethod.GET)
     public Result currentUser(@RequestHeader("Authorization") String token){
         return usersService.findUserByToken(token);
     }
 
+    /**
+     * log out
+     * @param token
+     * @return
+     */
     @ApiOperation(value = "logOut")
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public Result logOut(@RequestHeader("Authorization") String token){

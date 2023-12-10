@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 import 'reset-css';
 import { Event } from './Event/Event.js';
 import classes from './ProfilePage.module.css';
-import { Background } from '@/components/Background.js';
-import NavigationBar from '@/components/NavigationBar.js';
+import { Background } from '@/componets/Background.js';
+import NavigationBar from '@/componets/NavigationBar.js';
+import { Typography } from 'antd';
 
 interface Props {
   className?: string;
@@ -41,7 +42,22 @@ export const ProfilePage: FC<Props> = memo(function ProfilePage(props = {}) {
       <div className={classes.rate}>RATE HOST OR ATTENDEES</div>
       <Link to="/rate" className={classes.ratebutton}>RATE</Link>
       <div className={classes.rectangle7}></div>
-      <div className={classes.rectangle30}></div>
+      <div className={classes.rectangle30}>
+        <div className={classes.textBlockFirstName}>FirstName:
+          <Typography>
+            {localStorage.getItem('firstName')}
+          </Typography>
+        </div>
+        <div className={classes.textBlockLastName}>LastName:
+          <Typography>{localStorage.getItem('lastName')}</Typography>
+        </div>
+        <div className={classes.textBlockUniversity}>University:
+          <Typography>{localStorage.getItem('university')}</Typography>
+        </div>
+        <div className={classes.textBlockEmail}>Email:
+          <Typography>{localStorage.getItem('email')}</Typography>
+        </div>
+      </div>
       <div className={classes.recentAttendedEvents}>Recent Attended Events</div>
       <Event
         className={classes.event}
