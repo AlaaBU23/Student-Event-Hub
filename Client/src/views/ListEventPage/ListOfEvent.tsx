@@ -14,10 +14,14 @@ import { Background } from '@/componets/Background.js';
 interface Props {
   className?: string;
 }
+
+
+
 export const ListOfEvent: FC<Props> = memo(function ListOfEvent() {
 
   const [zip, setZip] = useState('');
-  const [events, setEvent] = useState('');
+  const [events, setEvent] = useState(Object);
+
   const handleZip = () => {
     setZip(zip);
   }
@@ -27,7 +31,7 @@ export const ListOfEvent: FC<Props> = memo(function ListOfEvent() {
     };
     getEventListByZipcode(eventData)
       .then((data) => {
-        setEvent(JSON.parse(data));
+        setEvent(JSON.parse(data.data));
       })
   }
 
@@ -36,7 +40,7 @@ export const ListOfEvent: FC<Props> = memo(function ListOfEvent() {
       <Background />
       <NavigationBar />
       {events.map((event) => {
-           <>
+           <div key={event.eventId}>
            <div className={classes.rectangle28}>
              <Rectangle28Icon className={classes.icon} />
            </div>
@@ -59,7 +63,7 @@ export const ListOfEvent: FC<Props> = memo(function ListOfEvent() {
                <p>Event Details : {event.eventDetails}</p>
              </div>
            </div>
-         </>
+         </div>
       })}
       <>
         <div className={classes.rectangle28}>
