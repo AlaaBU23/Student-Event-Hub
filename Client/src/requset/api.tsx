@@ -48,7 +48,7 @@ export const getEventInform = (params: EventReq) => request.get("/events/getById
 
 export const updateEventInform = (params: EventReq) => request.post("/events/update", params)
 
-export const getEventListByZipcode = (params: EventReq) => request.get("/events/getEventListById/" + params.zipCode)
+export const getEventListByZipcode = (params: EventZipcodeReq) => request.get("/events/getEventListById/" + params.zipCode)
 
 export const addRegistration = (params: RegistrationReq) => request.post("/eventregistrations/add" + params)
 

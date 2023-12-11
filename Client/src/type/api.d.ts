@@ -44,6 +44,11 @@ interface EventReq {
   zipCode: string;
 }
 
+// find event by zipcode
+interface EventZipcodeReq {
+  zipCode: string;
+}
+
 // requests for event registration api
 interface RegistrationReq {
   registrationId: string;
