@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="CS673.SpringBootStudentEventHub.mapper.UsersMapper">
+<mapper namespace="StudentEventHub.mapper.UsersMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="CS673.SpringBootStudentEventHub.domain.po.UsersPO">
+    <resultMap id="BaseResultMap" type="StudentEventHub.domain.po.UsersPO">
         <id column="user_id" property="userId" jdbcType="VARCHAR"/>
         <result column="first_name" property="firstName" jdbcType="VARCHAR"/>
         <result column="last_name" property="lastName" jdbcType="VARCHAR"/>

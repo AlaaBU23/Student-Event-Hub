@@ -2,9 +2,9 @@ package ${package.ServiceImpl};
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import CS673.SpringBootStudentEventHub.domain.po.${entity}PO;
-import CS673.SpringBootStudentEventHub.tools.*;
-import CS673.SpringBootStudentEventHub.domain.vo.*;
+import StudentEventHub.domain.po.${entity}PO;
+import StudentEventHub.tools.*;
+import StudentEventHub.domain.vo.*;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.transaction.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import CS673.SpringBootStudentEventHub.service.${table.serviceName};
+import StudentEventHub.service.${table.serviceName};
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
-import CS673.SpringBootStudentEventHub.mapper.${entity}Mapper;
+import StudentEventHub.mapper.${entity}Mapper;
 /**
 * @author ${author}
 * @date ${date}

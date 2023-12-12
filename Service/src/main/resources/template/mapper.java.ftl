@@ -1,8 +1,8 @@
 package ${package.Mapper};
 
 import ${package.Entity}.${entity};
-import CS673.SpringBootStudentEventHub.domain.po.${entity}PO;
-import CS673.SpringBootStudentEventHub.domain.vo.*;
+import StudentEventHub.domain.po.${entity}PO;
+import StudentEventHub.domain.vo.*;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

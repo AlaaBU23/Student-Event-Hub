@@ -3,14 +3,14 @@ package ${package.Controller};
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import CS673.SpringBootStudentEventHub.service.${table.serviceName};
-import CS673.SpringBootStudentEventHub.entity.${entity};
+import StudentEventHub.service.${table.serviceName};
+import StudentEventHub.entity.${entity};
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import CS673.SpringBootStudentEventHub.domain.po.${entity}PO;
-import CS673.SpringBootStudentEventHub.domain.vo.*;
+import StudentEventHub.domain.po.${entity}PO;
+import StudentEventHub.domain.vo.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 import java.util.List;

@@ -2,13 +2,13 @@ package ${package.Service};
 
 import com.baomidou.mybatisplus.extension.service.IService;
 
-import CS673.SpringBootStudentEventHub.domain.po.${entity}PO;
-import CS673.SpringBootStudentEventHub.domain.vo.*;
+import StudentEventHub.domain.po.${entity}PO;
+import StudentEventHub.domain.vo.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import CS673.SpringBootStudentEventHub.entity.${entity};
+import StudentEventHub.entity.${entity};
 import ${superServiceClassPackage};
 import org.springframework.beans.factory.annotation.Autowired;
-import CS673.SpringBootStudentEventHub.mapper.${entity}Mapper;
+import StudentEventHub.mapper.${entity}Mapper;
 
 /**
 * <p>

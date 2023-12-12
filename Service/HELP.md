@@ -3,7 +3,7 @@
 The following was discovered as part of building this project:
 
 * The original package name 'CS673.Spring-Boot-Student-Event-Hub' is invalid and this project uses '
-  CS673.SpringBootStudentEventHub' instead.
+  StudentEventHub' instead.
 
 # Getting Started
 
