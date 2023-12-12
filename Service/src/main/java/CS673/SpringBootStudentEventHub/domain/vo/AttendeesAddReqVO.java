@@ -27,8 +27,8 @@ public class AttendeesAddReqVO implements Serializable {
     @ApiModelProperty(value = "userId", dataType = "String")
     private String userId;
 
-    @ApiModelProperty(value = "eventId", dataType = "int")
-    private Integer eventId;
+    @ApiModelProperty(value = "eventId", dataType = "String")
+    private String eventId;
 
     @ApiModelProperty(value = "registrationStatus", dataType = "String")
     private String registrationStatus;
