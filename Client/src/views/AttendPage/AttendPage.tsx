@@ -15,50 +15,52 @@ import NavigationBar from '@/componets/NavigationBar.js';
 
 interface Props {
   className?: string;
+  eventDetails: EventReq;
+  userId: string | null;
 }
-export const AttendPage: FC<Props> = memo(function AttendPage(props = { data }) {
+
+
+
+export const AttendPage: FC<Props> = memo(function AttendPage({ eventDetails, userId, className }: Props) {
+  const { eventName, eventDetails: details, eventDate, location, zipCode } = eventDetails;
   return (
     <div>
       <Background />
       <NavigationBar />
-      {data.map((event) => {
-        <>
-          <div className={classes.rectangle17}>
-            <Rectangle17Icon className={classes.icon} />
-          </div>
-          <div className={classes.rectangle18}>
-            <Rectangle18Icon className={classes.icon2} />
-          </div>
-          <div className={classes.contactWithHost}>Contact with host</div>
-          <div className={classes.rectangle14}>
-            <Rectangle14Icon className={classes.icon3} />
-          </div>
-          <div className={classes.rectangle15}>
-            <Rectangle15Icon className={classes.icon4} />
-          </div>
-          <div className={classes.eventDetails}>Event details : {event.eventDetails}</div>
-          <div className={classes.rectangle12}>
-            <Rectangle12Icon className={classes.icon5} />
-          </div>
-          <div className={classes.rectangle13}>
-            <Rectangle13Icon className={classes.icon6} />
-          </div>
-          <div className={classes.frame15205}>
-            <div className={classes.eventName}>Event Name : {event.eventName}</div>
-            <div className={classes.dateAndTime}>Date and Time : {event.eventDate}</div>
-            <div className={classes.address}>Address : {event.location}</div>
-            <div className={classes.zipCode}>Zip Code : {event.zipCode}</div>
-          </div>
-          <div className={classes.join}>
-            <div className={classes.join2}>Join</div>
-          </div>
-          <div className={classes.timeLeftArea}>
-            <TimeLeftAreaIcon className={classes.icon7} />
-          </div>
-          <div className={classes.joinAnEvent}>Join An Event</div>
-          <div className={classes.hereAreTheEventDetails}>Here are the event details:</div>
-        </>
-      })}
+      <div className={classes.rectangle17}>
+        <Rectangle17Icon className={classes.icon} />
+      </div>
+      <div className={classes.rectangle18}>
+        <Rectangle18Icon className={classes.icon2} />
+      </div>
+      <div className={classes.contactWithHost}>Contact with host</div>
+      <div className={classes.rectangle14}>
+        <Rectangle14Icon className={classes.icon3} />
+      </div>
+      <div className={classes.rectangle15}>
+        <Rectangle15Icon className={classes.icon4} />
+      </div>
+      <div className={classes.eventDetails}>Event details</div>
+      <div className={classes.rectangle12}>
+        <Rectangle12Icon className={classes.icon5} />
+      </div>
+      <div className={classes.rectangle13}>
+        <Rectangle13Icon className={classes.icon6} />
+      </div>
+      <div className={classes.frame15205}>
+        <div className={classes.eventName}>Event Name{eventName}</div>
+        <div className={classes.dateAndTime}>Date and Time {new Date(eventDate).toLocaleString()}</div>
+        <div className={classes.address}>Address{location}</div>
+        <div className={classes.zipCode}>Zip Code{zipCode}</div>
+      </div>
+      <div className={classes.join}>
+        <div className={classes.join2}>Join</div>
+      </div>
+      <div className={classes.timeLeftArea}>
+        <TimeLeftAreaIcon className={classes.icon7} />
+      </div>
+      <div className={classes.joinAnEvent}>Join An Event</div>
+      <div className={classes.hereAreTheEventDetails}>Here are the event details:</div>
     </div>
   );
 });
