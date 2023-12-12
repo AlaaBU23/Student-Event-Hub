@@ -29,4 +29,5 @@ public interface IRatingsService extends IService<RatingsPO> {
 
     public Integer deleteRatingsList(RatingsBatchReqVO Ratings_BatchReqVO);
 
+    public Double CalculateRating(String id);
 }
