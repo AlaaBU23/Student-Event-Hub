@@ -14,6 +14,7 @@ import CS673.SpringBootStudentEventHub.domain.vo.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.web.bind.annotation.RestController;
 
@@ -82,4 +83,9 @@ public class RatingsController {
         return ratingsService.updateRatings(UpdateReqVO);
     }
 
+    @ApiOperation(value = "计算评分")
+    @RequestMapping(value = "/calculate/{Id}", method = RequestMethod.POST)
+    public Double calc(@PathVariable String Id) {
+        return ratingsService.CalculateRating(Id);
+    }
 }
