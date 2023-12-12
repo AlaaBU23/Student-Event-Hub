@@ -3,7 +3,7 @@ package CS673.SpringBootStudentEventHub.tools;
 public class SnowFlakeHelper {
     private long workerId;
     private long datacenterId;
-    //12位的序列号
+    //12-digit serial number
     private long sequence;
 
     public SnowFlakeHelper(long workerId, long datacenterId, long sequence) {
@@ -18,28 +18,28 @@ public class SnowFlakeHelper {
         this.sequence = sequence;
     }
 
-    //初始时间戳
+    //initial timestamp
     private long twepoch = 1288834974657L;
 
-    //长度为5位
+    //5 digits in length
     private long workerIdBits = 5L;
     private long datacenterIdBits = 5L;
-    //最大值
+    //maximum values
     private long maxWorkerId = -1L ^ (-1L << workerIdBits);
     private long maxDatacenterId = -1L ^ (-1L << datacenterIdBits);
-    //序列号id长度
+    //Serial number id length
     private long sequenceBits = 12L;
-    //序列号最大值
+    //Serial Number Maximum
     private long sequenceMask = -1L ^ (-1L << sequenceBits);
 
-    //工作id需要左移的位数，12位
+    //Number of bits to be shifted left for the job id, 12 bits
     private long workerIdShift = sequenceBits;
-    //数据id需要左移位数 12+5=17位
+    //Data id needs to be shifted left by 12+5=17 bits
     private long datacenterIdShift = sequenceBits + workerIdBits;
-    //时间戳需要左移位数 12+5+5=22位
+    //Timestamps need to be shifted left by a number of bits 12+5+5=22 bits
     private long timestampLeftShift = sequenceBits + workerIdBits + datacenterIdBits;
 
-    //上次时间戳，初始值为负数
+    //Last timestamp, initial value is negative
     private long lastTimestamp = -1L;
 
     public long getWorkerId() {
@@ -54,18 +54,22 @@ public class SnowFlakeHelper {
         return System.currentTimeMillis();
     }
 
-    //下一个ID生成算法
+    //ID generation algorithm
     public synchronized long genId() {
         long timestamp = timeGen();
 
-        //获取当前时间戳如果小于上次时间戳，则表示时间戳获取出现异常
+        //If the current timestamp is less than the last timestamp, then there is an exception in the timestamp acquisition.
         if (timestamp < lastTimestamp) {
             System.err.printf("clock is moving backwards.  Rejecting requests until %d.", lastTimestamp);
             throw new RuntimeException(String.format("Clock moved backwards.  Refusing to generate id for %d milliseconds",
                     lastTimestamp - timestamp));
         }
 
-        //获取当前时间戳如果等于上次时间戳（同一毫秒内），则在序列号加一；否则序列号赋值为0，从0开始。
+        /**
+         * Get the current timestamp if it is equal to the last timestamp (within the same millisecond),
+         * then add one to the sequence number;
+         * otherwise the sequence number is assigned to 0, starting from 0.
+         */
         if (lastTimestamp == timestamp) {
             sequence = (sequence + 1) & sequenceMask;
             if (sequence == 0) {

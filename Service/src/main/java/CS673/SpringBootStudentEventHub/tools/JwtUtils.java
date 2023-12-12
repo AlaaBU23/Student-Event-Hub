@@ -17,10 +17,10 @@ public class JwtUtils {
         Map<String, Object> claims = new HashMap<>();
         claims.put("userId", userId);
         JwtBuilder jwtBuilder = Jwts.builder()
-                .signWith(SignatureAlgorithm.HS256, jwtToken) // 签发算法，秘钥为jwtToken
-                .setClaims(claims) // body数据，要唯一，自行设置
-                .setIssuedAt(new Date()) // 设置签发时间
-                .setExpiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 60 * 1000));// 一天的有效时间
+                .signWith(SignatureAlgorithm.HS256, jwtToken) // Issuance algorithm, secret key is jwtToken
+                .setClaims(claims) // Body data, to be unique, self-set
+                .setIssuedAt(new Date()) // Setting the time of issuance
+                .setExpiration(new Date(System.currentTimeMillis() + 24 * 60 * 60 * 60 * 1000));// Effective time of day
         String token = jwtBuilder.compact();
         return token;
     }
