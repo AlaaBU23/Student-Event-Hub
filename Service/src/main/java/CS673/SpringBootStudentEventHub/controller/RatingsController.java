@@ -86,7 +86,6 @@ public class RatingsController {
     @ApiOperation(value = "计算评分")
     @RequestMapping(value = "/calculate/{Id}", method = RequestMethod.POST)
     public Double calc(@PathVariable String Id) {
-        ratingsService.CalculateRating(Id);
-        return 1.0;
+        return ratingsService.CalculateRating(Id);
     }
 }

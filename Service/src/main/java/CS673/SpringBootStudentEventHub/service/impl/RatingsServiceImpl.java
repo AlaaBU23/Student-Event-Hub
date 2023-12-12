@@ -16,6 +16,7 @@ import CS673.SpringBootStudentEventHub.service.IRatingsService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -119,13 +120,19 @@ public class RatingsServiceImpl extends ServiceImpl<RatingsMapper, RatingsPO> im
     }
     public Double CalculateRating(String id){
         Double rate_ini = 0.0;
+        Double sum = 0.0;
         RatingsRespVO vo = new RatingsRespVO();
         if (StringUtils.isNotBlank(id)) {
             QueryWrapper<RatingsPO> queryWrapper = new QueryWrapper<>();
             queryWrapper.eq("rated_user_id", id);
             queryWrapper.select("rating_value as RV");
-            List<Map<String,Object>> list = Ratings_Mapper.selectMaps(queryWrapper);
-            System.out.println(list.iterator());
+            List<Map<String, Object>> results = Ratings_Mapper.selectMaps(queryWrapper);
+            for (Map<String, Object> row : results) {
+                System.out.println(row);
+                Integer rate = (Integer) row.get("RV");
+                sum+=rate;
+            }
+            rate_ini = sum/results.size();
         }
         return rate_ini;
     }
